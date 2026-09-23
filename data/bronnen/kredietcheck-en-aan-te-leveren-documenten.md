@@ -1,7 +1,8 @@
 # Kredietcheck: Aan te Leveren Documenten
 
 > Bron: https://website-justlease-nl-api.justlease.nl/uploads/2025/10/Justlease_Aanleveren-documenten.pdf
-> Automatisch geconverteerd vanuit PDF op justlease.nl/voorwaarden. Controleer bij twijfel de brondocumenten voor de actuele/juridisch geldende tekst.
+> Versiedatum: november 2025
+> Automatisch geconverteerd vanuit PDF op justlease.nl/voorwaarden. Controleer bij twijfel het brondocument voor de actuele/juridisch geldende tekst.
 
 WELKE DOCUMENTEN MOET JE                                                                                      INDIEN VAN TOEPASSING
 AANLEVEREN BIJ EEN AANVRAAG                                                                                   DUO STUDIESCHULD:
@@ -49,3 +50,5 @@ specificatie
                                                                           (Met vermelding van fiscale winst)  (Niet ouder dan twee maanden)
 
 justlease.nl Justlease financi-le toetsing - versie 11.2025
+
+<!--pagina-->

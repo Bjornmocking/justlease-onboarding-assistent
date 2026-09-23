@@ -1,7 +1,8 @@
-# Aanvullende Voorwaarden Justlease (januari 2026)
+# Aanvullende Voorwaarden Justlease
 
 > Bron: https://website-justlease-nl-api.justlease.nl/uploads/2026/01/Justlease-aanvullende-voorwaarden-versie-jan2026.docx.pdf
-> Automatisch geconverteerd vanuit PDF op justlease.nl/voorwaarden. Controleer bij twijfel de brondocumenten voor de actuele/juridisch geldende tekst.
+> Versiedatum: januari 2026
+> Automatisch geconverteerd vanuit PDF op justlease.nl/voorwaarden. Controleer bij twijfel het brondocument voor de actuele/juridisch geldende tekst.
 
 AANVULLENDE VOORWAARDEN JUSTLEASE
 
@@ -17,6 +18,8 @@ AANVULLENDE VOORWAARDEN JUSTLEASE
                             overeen met de bijbehorende titel in de Algemene Voorwaarden van
 
                                                     het Keurmerk Private Lease.
+
+<!--pagina-->
 
        INTRODUCTIE
 
@@ -57,6 +60,8 @@ AANVULLENDE VOORWAARDEN JUSTLEASE
                  handmatig of via geautomatiseerde systemen, bijvoorbeeld bij fouten of onvolledige
                  gegevens. Aanpassingen worden gedaan om de betrouwbaarheid en consistentie van
                  de informatie op het platform te waarborgen.
+
+<!--pagina-->
 
        D. DE DOCUMENTEN VAN DE LEASEOVEREENKOMST EN HUN
        ONDERLINGE RANGORDE
@@ -100,6 +105,8 @@ AANVULLENDE VOORWAARDEN JUSTLEASE
                  mag gereden worden, werd bereikt;
            - In geval van diefstal, 30 dagen nadat aangifte van diefstal werd gedaan.
 
+<!--pagina-->
+
        G. AFLEVERING VAN HET VOERTUIG; PERMANENTE VERVANGING IN
        VERBAND MET HOGE REPARATIE- OF ONDERHOUDSKOSTEN;
        TENAAMSTELLING VAN HET KENTEKEN
@@ -135,6 +142,8 @@ AANVULLENDE VOORWAARDEN JUSTLEASE
            - Ons alle informatie te verstrekken die van belang kan zijn om de financi-le gevolgen
                  van de schade te regelen.
 
+<!--pagina-->
+
 Is het voertuig na een schade niet meer (veilig) te gebruiken, dan zal Justlease zorg laten
 dragen voor de repatri-ring van het voertuig en het vervoer van de inzittenden naar een
 veilige plek. Er zal op dat moment ook een vervangend voertuig worden aangeboden. Wie
@@ -167,6 +176,8 @@ bij u in rekening. Is de schade bij het inleveren van het voertuig nog niet afge
 brengen wij in eerste instantie de volledige eigen bijdrage in rekening. Als achteraf blijkt
 dat wij de schade gedeeltelijk hebben kunnen verhalen, dan betalen wij de eigen bijdrage,
 naar rato van het gedeelte dat wij hebben verhalen, aan u terug.
+
+<!--pagina-->
 
           Justlease treedt op als bemiddelaar en niet als adviseur en brengt de WA- en
           cascoverzekering onder bij Greenval Insurance Company Limited (hierna `Greenval') met
@@ -208,6 +219,8 @@ naar rato van het gedeelte dat wij hebben verhalen, aan u terug.
           vervoer voor uw rekening zijn. Wanneer u heeft gekozen voor de optie `direct vervangend
           vervoer' in uw leaseovereenkomst, zijn de kosten van vervangend vervoer voor de eerste
           48 uur ook inbegrepen in het termijnbedrag.
+
+<!--pagina-->
 
           In tegenstelling tot hetgeen gesteld in artikel 39 heeft u alleen recht op vervangend
           vervoer in het buitenland als:
@@ -253,6 +266,8 @@ naar rato van het gedeelte dat wij hebben verhalen, aan u terug.
           Justlease berekent u bij voortijdige be-indiging, conform artikel 47, een vaste
           opzeggingsvergoeding van 50% van de resterende termijnbedragen. Het aantal
           resterende termijnbedragen wordt geteld vanaf het moment dat de leaseovereenkomst,
+
+<!--pagina-->
 
           met inachtneming van een opzegtermijn van --n maand, voortijdig wordt berekend, tot
           aan het moment waarop de leaseovereenkomst op basis van de oorspronkelijke
@@ -301,6 +316,8 @@ naar rato van het gedeelte dat wij hebben verhalen, aan u terug.
                  hiervoor genoemde be-indiging van de arbeidsovereenkomst van onbepaalde tijd
                  sprake is;
 
+<!--pagina-->
+
            - Uit de door Justlease uit te voeren berekening conform de Draagkrachtnorm
                  Keurmerk Private Lease (op basis van de documenten die u moet aanleveren) naar
                  voren komt dat uw inkomsten niet (meer) voldoende zijn om de termijnbedragen te
@@ -345,6 +362,8 @@ naar rato van het gedeelte dat wij hebben verhalen, aan u terug.
           aan het voertuig, tot het moment dat Justlease het voertuig op het inleverpunt heeft
           ingenomen.
 
+<!--pagina-->
+
        X. PERSOONSGEGEVENS
 
           Uw persoonsgegevens worden door Justlease als verwerkingsverantwoordelijke in de zin
@@ -388,8 +407,12 @@ naar rato van het gedeelte dat wij hebben verhalen, aan u terug.
                gestelde overdrachtsdocument ondertekent en naar Justlease stuurt;
                Een acceptatieprocedure uitgevoerd ten aanzien van de nieuwe contractant.
 
+<!--pagina-->
+
           Alleen als aan de bovenstaande voorwaarden is voldaan en daaruit geen bezwaar naar
           voren komt, kan de leaseovereenkomst worden overgedragen. Wanneer de
           Leaseovereenkomst overgedragen wordt zijn de op dat moment geldende
           overzettingskosten van toepassing en worden deze in rekening gebracht aan de huidige
           contractant.
+
+<!--pagina-->

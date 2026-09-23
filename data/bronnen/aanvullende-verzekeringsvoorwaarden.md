@@ -1,7 +1,8 @@
 # Aanvullende Verzekeringsvoorwaarden (AVNLLD/PA20.25)
 
 > Bron: https://website-justlease-nl-api.justlease.nl/uploads/2025/01/AVNLLDPA20.25.0-Aanvullende-voorwaarden-Greenval-Policy-Conditions-NL.pdf
-> Automatisch geconverteerd vanuit PDF op justlease.nl/voorwaarden. Controleer bij twijfel de brondocumenten voor de actuele/juridisch geldende tekst.
+> Versiedatum: versie AVNLLD/PA 20.25 (2025)
+> Automatisch geconverteerd vanuit PDF op justlease.nl/voorwaarden. Controleer bij twijfel het brondocument voor de actuele/juridisch geldende tekst.
 
 AANVULLENDE VERZEKERINGEN
 
@@ -11,7 +12,9 @@ SCHADE INZITTENDEN
 
 ALGEMENE EN BIJZONDERE
 VOORWAARDEN
-INHOUDSOPGAVE                                                  Policy Conditions
+
+<!--pagina-->
+INHOUDSOPGAVE                                                  Policy Conditions
                                                                AVNLLD/PA20.25
 I    ALGEMENE VOORWAARDEN
      1. Begripsomschrijvingen
@@ -55,7 +58,9 @@ IV   BIJZONDERE VOORWAARDEN SCHADE INZITTENDENVERZEKERING
      29. Dekking
      30. Bijzondere uitsluitingsgronden
      31. Schade uitkering
-                                           Policy Conditions
+
+<!--pagina-->
+                                           Policy Conditions
                                            AVNLLD/PA20.25
 
 I   ALGEMENE VOORWAARDEN
@@ -108,7 +113,8 @@ vrouwen bedoeld.
     Voor zover de bijzondere voorwaarden afwijken van de algemene voorwaarden, geldt wat in de
     bijzondere voorwaarden vermeld staat.
 
-                                                          Policy Conditions
+<!--pagina-->
+                                                          Policy Conditions
                                                           AVNLLD/PA20.25
 
 3.  GRONDSLAG EN ONZEKERE GEBEURTENIS
@@ -158,7 +164,8 @@ vrouwen bedoeld.
     het Verzekeringsbewijs anders vermeldt. De verzekering is ook geldig tijdens alle vormen van vervoer
     van het Motorrijtuig in of tussen de landen van het verzekeringsgebied.
 
-                                                                  Policy Conditions
+<!--pagina-->
+                                                                  Policy Conditions
                                                                   AVNLLD/PA20.25
 
 6.  ALGEMENE UITSLUITINGSGRONDEN
@@ -213,7 +220,8 @@ vrouwen bedoeld.
     Schade ontstaan nadat de Verzekeringnemer opgehouden heeft belang bij het Motorrijtuig te
     hebben en tevens de feitelijke macht erover heeft verloren.
 
-                                                                                                                                      Policy Conditions
+<!--pagina-->
+                                                                                                                                      Policy Conditions
                                                                                                                                      AVNLLD/PA20.25
 
 (g) Meervoudige verzekering
@@ -252,7 +260,8 @@ vrouwen bedoeld.
         (ii) voor andere doeleinden wordt gebruikt dan is vermeld op de polis;
         (iii) voor een ander doel wordt gebruikt dan door de wet is toegestaan.
 
-                                                                                                                                      Policy Conditions
+<!--pagina-->
+                                                                                                                                      Policy Conditions
                                                                                                                                      AVNLLD/PA20.25
 
 (m) Vliegvelden
@@ -289,7 +298,8 @@ vrouwen bedoeld.
         Schade die is veroorzaakt door een gebeurtenis die heeft plaatsgevonden in het verleden of
         ten tijde van de overdracht van een verzekeringsportefeuille.
 
-                                                                           Policy Conditions
+<!--pagina-->
+                                                                           Policy Conditions
                                                                            AVNLLD/PA20.25
 
     (r) De bestuurder vertoont een zeer gevaarlijk rijgedrag, zoals staat in artikel 5a bis van de Road
@@ -344,7 +354,8 @@ vrouwen bedoeld.
               dagvaardingen en dergelijke, zo spoedig mogelijk, maar in ieder geval binnen twee (2) dagen
               na ontvangst daarvan, onbeantwoord aan de Verzekeraar toe te sturen;
 
-                      Policy Conditions
+<!--pagina-->
+                      Policy Conditions
                       AVNLLD/PA20.25
 
     (d) in het geval van diefstal of pogingen daartoe, verduistering, joy-riding of oplichting
@@ -397,7 +408,8 @@ vrouwen bedoeld.
     Verzekeringnemer moet afleiden dat hij niet wil voldoen aan een betalingsverplichting, wordt door de
     Verzekeraar geen dekking verleend.
 
-                                                                                                                                                    Policy Conditions
+<!--pagina-->
+                                                                                                                                                    Policy Conditions
                                                                                                                                                    AVNLLD/PA20.25
 
 11. DUUR VAN DE VERZEKERING
@@ -437,7 +449,8 @@ vrouwen bedoeld.
           te doen aan de Verzekeraar. In die gevallen zal de verzekering eindigen op de datum van mededeling
           aan Verzekeraar.
 
-                                                                                                                                                    Policy Conditions
+<!--pagina-->
+                                                                                                                                                    Policy Conditions
                                                                                                                                                    AVNLLD/PA20.25
 
 12.4 Eigendomsoverdracht
@@ -492,7 +505,8 @@ vrouwen bedoeld.
 
                     Greenval Insurance DAC
 
-                                                                                                                                                    Policy Conditions
+<!--pagina-->
+                                                                                                                                                    Policy Conditions
                                                                                                                                                    AVNLLD/PA20.25
 
                     17-19 Sir John Rogersons Quay, D02DT18
@@ -540,7 +554,8 @@ vrouwen bedoeld.
           Vragen over de bescherming van persoonlijke gegevens kunnen per brief of email naar het volgende
           adres gestuurd worden:
 
-                                                            Policy Conditions
+<!--pagina-->
+                                                            Policy Conditions
                                                             AVNLLD/PA20.25
 
                     Greenval Insurance DAC
@@ -593,7 +608,8 @@ In deze Bijzondere Voorwaarden wordt verstaan onder:
 bepaalde in artikel 1 van de W.A.M. in aanmerking nemende, met een aanhangwagen moet worden
 gelijkgesteld.
 
-                                                                                                                                                    Policy Conditions
+<!--pagina-->
+                                                                                                                                                    Policy Conditions
                                                                                                                                                    AVNLLD/PA20.25
 
 "Juridische Bijstand" het uitvoeren van een onderzoek naar de juridische gevolgen van een incident zoals
@@ -634,7 +650,8 @@ worden voldaan door de Juridische Bijstand Claim Behandelaar.
                               er dekking worden geboden voor zaken met betrekking tot:
                               (1) Juridisch verhaal voor Letsel
 
-                                                                                                                                      Policy Conditions
+<!--pagina-->
+                                                                                                                                      Policy Conditions
                                                                                                                                      AVNLLD/PA20.25
 
                             Dat is wanneer de Verzekerde een claim wil instellen ten opzichte van een
@@ -672,7 +689,8 @@ worden voldaan door de Juridische Bijstand Claim Behandelaar.
                             Motorrijtuig;
                   (2) een verbod heeft om te rijden;
 
-                                                                                                                                      Policy Conditions
+<!--pagina-->
+                                                                                                                                      Policy Conditions
                                                                                                                                      AVNLLD/PA20.25
 
                   (3) nog niet de wettelijke leeftijd heeft bereikt voorgeschreven om het Motorrijtuig
@@ -726,7 +744,8 @@ worden voldaan door de Juridische Bijstand Claim Behandelaar.
 
         (vi) Een externe deskundige
 
-                                                                                                                                      Policy Conditions
+<!--pagina-->
+                                                                                                                                      Policy Conditions
                                                                                                                                      AVNLLD/PA20.25
 
                   De Verzekeraar/ de Juridische Bijstand Claim Behandelaar zal nooit verplicht zijn om
@@ -779,7 +798,8 @@ worden voldaan door de Juridische Bijstand Claim Behandelaar.
                             (externe) juridische kosten die op basis van een contractuele of wettelijke
                             bepaling kunnen worden teruggevorderd, geschikt of vergoed door een derde
 
-                                                                                                                            Policy Conditions
+<!--pagina-->
+                                                                                                                            Policy Conditions
                                                                                                                            AVNLLD/PA20.25
 
                     partij zullen alleen maar worden voorgeschoten door de Juridische Bijstand
@@ -833,7 +853,8 @@ worden voldaan door de Juridische Bijstand Claim Behandelaar.
           aanzien van de opzet. Tot het moment dat de uitspraak bindend is geworden zal de
           Verzekeraar niet gehouden zijn enige kosten te vergoeden.
 
-                                                                                                                                      Policy Conditions
+<!--pagina-->
+                                                                                                                                      Policy Conditions
                                                                                                                                      AVNLLD/PA20.25
 
         (vii) BTW
@@ -888,7 +909,8 @@ worden voldaan door de Juridische Bijstand Claim Behandelaar.
         vrijgegeven en om op alle mogelijke manieren mee te werken om zo de terugbetaling te
         verzekeren.
 
-                                                                                                                                                    Policy Conditions
+<!--pagina-->
+                                                                                                                                                    Policy Conditions
                                                                                                                                                    AVNLLD/PA20.25
 
           (k) Geschillen
@@ -941,7 +963,8 @@ worden voldaan door de Juridische Bijstand Claim Behandelaar.
           andere verzekeringen al dan niet van oudere datum, of wanneer de schade gedekt zou zijn als deze
           verzekering niet zou hebben bestaan, loopt deze verzekering alleen als excedent boven de dekking
 
-                                                                                                                                                    Policy Conditions
+<!--pagina-->
+                                                                                                                                                    Policy Conditions
                                                                                                                                                    AVNLLD/PA20.25
 
           die onder de andere verzekering(en) is of wordt verleend. Dit ongeacht of in de andere verzekering(en)
@@ -996,7 +1019,8 @@ worden voldaan door de Juridische Bijstand Claim Behandelaar.
                       verstreken nadat de vordering waartegen de verzekering dekking verleent, binnen de voor
                       deze geldende verjaring- of vervaltermijn is ingesteld.
 
-                                                                                                                                                    Policy Conditions
+<!--pagina-->
+                                                                                                                                                    Policy Conditions
                                                                                                                                                    AVNLLD/PA20.25
 
             (b) Een verjaring wordt gestuit door een schriftelijke mededeling, waarbij op uitkering aanspraak
@@ -1021,7 +1045,8 @@ worden voldaan door de Juridische Bijstand Claim Behandelaar.
                       gemaakte kosten. Een verhaalsrecht op Verzekerden komt Verzekeraar ook toe bij schade,
                       veroorzaakt na be-indiging van de verzekering.
 
-                                                                                                                                                    Policy Conditions
+<!--pagina-->
+                                                                                                                                                    Policy Conditions
                                                                                                                                                    AVNLLD/PA20.25
 
 III BIJZONDERE VOORWAARDEN ONGEVALLEN INZITTENDENVERZEKERING
@@ -1062,7 +1087,8 @@ lichamelijke invaliditeit, op voorwafarde dat de aard van het letsel objectief g
           monstercollecties, alsmede zaken behorende tot de standaarduitrusting of het Toebehoren van het
           Motorrijtuig.
 
-                                                                                                                                                    Policy Conditions
+<!--pagina-->
+                                                                                                                                                    Policy Conditions
                                                                                                                                                    AVNLLD/PA20.25
 
 24.3 Maximaal aantal inzittenden
@@ -1104,7 +1130,8 @@ lichamelijke invaliditeit, op voorwafarde dat de aard van het letsel objectief g
             (a) De verzekerde is verplicht, zich na een ongeval zo spoedig mogelijk onder geneeskundige
                       behandeling te stellen en volledig aan zijn herstel mee te werken.
 
-                                                                                                                                                    Policy Conditions
+<!--pagina-->
+                                                                                                                                                    Policy Conditions
                                                                                                                                                    AVNLLD/PA20.25
 
             (b) De verzekerde is verplicht aan ons of aan een door ons aangewezen arts alle gewenste
@@ -1146,7 +1173,8 @@ lichamelijke invaliditeit, op voorwafarde dat de aard van het letsel objectief g
                     omschreven in artikel 25 en is ontstaan binnen 2 jaar na het ongeval.
             (b) Omvang van de uitkering
 
-                                                                                                                            Policy Conditions
+<!--pagina-->
+                                                                                                                            Policy Conditions
                                                                                                                            AVNLLD/PA20.25
 
 In geval van blijvend (functie)verlies worden aan de getroffen verzekerde de volgende
@@ -1196,7 +1224,8 @@ meer dan 100 procent van het verzekerde bedrag zal bedragen:
           - het gehoor van beide oren 50 procent
           - het reuk- en smaakvermogen 20 procent
 
-                                                                                                                                                    Policy Conditions
+<!--pagina-->
+                                                                                                                                                    Policy Conditions
                                                                                                                                                    AVNLLD/PA20.25
 
                               - het verlies van het sexuele vermogen, echter behoudens het bepaalde onder (c)
@@ -1250,7 +1279,8 @@ meer dan 100 procent van het verzekerde bedrag zal bedragen:
           Indien de Verzekeraar een medische expertise noodzakelijk acht om het uitkeringspercentage te
           kunnen vaststellen, is de verzekerde verplicht hieraan zijn medewerking te verlenen. De verzekerde
 
-                                                                                                                                                    Policy Conditions
+<!--pagina-->
+                                                                                                                                                    Policy Conditions
                                                                                                                                                    AVNLLD/PA20.25
 
           dient zich daartoe door een door de Verzekeraar nader aan te wijzen arts te laten onderzoeken of voor
@@ -1286,7 +1316,8 @@ lichamelijke invaliditeit, op voorwaarde dat de aard van het letsel objectief ge
                     gevolge hebbend, met inbegrip van de daaruit voortvloeiende schaden.
             (f) Zaakschade
 
-                                                                                                                                                    Policy Conditions
+<!--pagina-->
+                                                                                                                                                    Policy Conditions
                                                                                                                                                    AVNLLD/PA20.25
 
                     Schade door verlies of beschadiging van zaken, die behoren tot de particuliere huishouding
@@ -1326,7 +1357,8 @@ lichamelijke invaliditeit, op voorwaarde dat de aard van het letsel objectief ge
                     Schade veroorzaakt terwijl het motorrijtuig tegen betaling in behandeling, onderhoud of
                     reparatie was.
 
-                                                                                                                                                    Policy Conditions
+<!--pagina-->
+                                                                                                                                                    Policy Conditions
                                                                                                                                                    AVNLLD/PA20.25
 
 31. SCHADE UITKERING
@@ -1340,3 +1372,5 @@ lichamelijke invaliditeit, op voorwaarde dat de aard van het letsel objectief ge
           Verzekerden samen.
           Bij overschrijding van deze bedragen zal de schadevergoeding naar evenredigheid van hun schade
           over de rechthebbende Verzekerden verdeeld worden.
+
+<!--pagina-->

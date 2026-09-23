@@ -300,6 +300,48 @@ a {
   color: var(--blue);
 }
 
+.message-sources {
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Sales of klantenservice */
+
+.routing {
+  margin-top: 56px;
+}
+
+.routing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.routing-card {
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--blue);
+  border-radius: 4px;
+  padding: 16px 20px;
+}
+
+.routing-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.routing-card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.routing-card li {
+  margin-bottom: 6px;
+}
+
 /* Documents */
 
 .doc-list {
@@ -445,6 +487,10 @@ a {
 
   .stat-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .routing-grid {
+    grid-template-columns: 1fr;
   }
 
   .about-grid,

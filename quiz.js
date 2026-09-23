@@ -115,6 +115,18 @@ const QUESTIONS = [
     explanation: 'Het voertuig staat op naam van Arval B.V. Justlease is een handelsnaam van Arval B.V.',
     source: 'Aanvullende voorwaarden Justlease',
   },
+  {
+    question: 'Een klant vraagt wanneer en hoe zijn nieuwe auto wordt geleverd. Wie pakt dit op?',
+    options: ['Klantenservice', 'Sales', 'De financiële afdeling', 'De klant regelt dit zelf met de dealer'],
+    explanation: 'Alles tot en met het afronden van de aanvraag is sales. De levering van de auto hoort bij klantenservice.',
+    source: 'Werkwijze Justlease Sales (intern)',
+  },
+  {
+    question: 'De auto van een klant rijdt al, maar hij wil zijn contract verlengen. Wie pakt dit op?',
+    options: ['Sales', 'Klantenservice', 'De financiële afdeling', 'Niemand, verlengen kan alleen bij het einde van het contract'],
+    explanation: 'Verlengingen vallen onder sales, ook als de auto al rijdt. Twijfelt de klant bij een aflopend contract over een nieuwe auto, doorrijden of inleveren, dan is dat ook een salesgesprek. Kiest hij voor inleveren, dan is het klantenservice.',
+    source: 'Werkwijze Justlease Sales (intern)',
+  },
 ];
 
 const quizContainer = document.getElementById('quiz-container');

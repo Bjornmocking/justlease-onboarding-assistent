@@ -1,7 +1,8 @@
 # Algemene Verzekeringsvoorwaarden (AVNL MTPL/MOD 20.25)
 
 > Bron: https://website-justlease-nl-api.justlease.nl/uploads/2025/01/Verzekeringsvoorwaarden-AVNL-MTPLMOD-20.25-PL.pdf
-> Automatisch geconverteerd vanuit PDF op justlease.nl/voorwaarden. Controleer bij twijfel de brondocumenten voor de actuele/juridisch geldende tekst.
+> Versiedatum: versie AVNL MTPL/MOD 20.25 (2025)
+> Automatisch geconverteerd vanuit PDF op justlease.nl/voorwaarden. Controleer bij twijfel het brondocument voor de actuele/juridisch geldende tekst.
 
 MOTORRIJTUIGENVERZEKERING (WAM)
 CASCOVERZEKERING
@@ -10,7 +11,9 @@ PRIVATE LEASE
 
 ALGEMENE EN BIJZONDERE
 VOORWAARDEN
-                                                                                     Policy Conditions
+
+<!--pagina-->
+                                                                                     Policy Conditions
                                                             PRIVATE LEASE AVNL MTPL/MOD 20.25
 
 INHOUDSOPGAVE
@@ -69,7 +72,8 @@ II  BIJZONDERE VOORWAARDEN MOTORRIJTUIGENVERZEKERING (WAM) EN CASCOVERZEKERING
 
     24. Verjaring
 
-                                                                    Policy Conditions
+<!--pagina-->
+                                                                    Policy Conditions
                                            PRIVATE LEASE AVNL MTPL/MOD 20.25
 
 I   ALGEMENE VOORWAARDEN
@@ -123,7 +127,8 @@ Omzetbelasting (BTW).
 verhoging van de veiligheid, alsmede audio- en audiovisuele apparatuur, die niet in de oorspronkelijke
 Catalogusprijs zijn inbegrepen. Onder Toebehoren worden niet verstaan een radardetector, mobiele telefoon,
 
-                                                                                   Policy Conditions
+<!--pagina-->
+                                                                                   Policy Conditions
                                                           PRIVATE LEASE AVNL MTPL/MOD 20.25
 
 geluids- en informatiedragers en overige beeld-, communicatie- en geluidsapparatuur waaronder ook
@@ -178,7 +183,8 @@ vrouwen bedoeld.
 
     (e) toevoeging van Toebehoren.
 
-                                                                                  Policy Conditions
+<!--pagina-->
+                                                                                  Policy Conditions
                                                          PRIVATE LEASE AVNL MTPL/MOD 20.25
 
     In deze gevallen heeft de Verzekeraar het recht op opzegging van de verzekering, op
@@ -233,7 +239,8 @@ vrouwen bedoeld.
             geweldpleging de macht over de verzekerde auto hebben verschaft en van hen die, dit
             wetende, de verzekerde auto zonder geldige reden gebruiken.
 
-                                                                                                                                     Policy Conditions
+<!--pagina-->
+                                                                                                                                     Policy Conditions
                                                                                                            PRIVATE LEASE AVNL MTPL/MOD 20.25
 
 (e) Zaken of dieren die met het Motorrijtuig worden vervoerd
@@ -288,7 +295,8 @@ vrouwen bedoeld.
 
 (l) Wijziging of ander gebruik van het verzekerde Motorrijtuig.
 
-                                                                                                                                     Policy Conditions
+<!--pagina-->
+                                                                                                                                     Policy Conditions
                                                                                                            PRIVATE LEASE AVNL MTPL/MOD 20.25
 
         Een schade of gebeurtenis die veroorzaakt is terwijl het verzekerde Motorrijtuig:
@@ -323,7 +331,8 @@ vrouwen bedoeld.
         genoemd staan in, dan wel voortvloeien uit de algemene en/of bijzondere voorwaarden en de
         Verzekeraar in een redelijk belang is geschaad.
 
-                                                                     Policy Conditions
+<!--pagina-->
+                                                                     Policy Conditions
                                             PRIVATE LEASE AVNL MTPL/MOD 20.25
 
     (q) Terugwerkende kracht
@@ -379,7 +388,8 @@ vrouwen bedoeld.
     (b) aan de Verzekeraar volledige medewerking te verlenen en alles na te laten wat diens
               belangen zou kunnen schaden;
 
-                                                                                             Policy Conditions
+<!--pagina-->
+                                                                                             Policy Conditions
                                                                     PRIVATE LEASE AVNL MTPL/MOD 20.25
 
     (c) alle ontvangen stukken met betrekking tot de schade, zoals aansprakelijkstellingen,
@@ -433,7 +443,8 @@ vrouwen bedoeld.
 
     (a) het opheffen van een op het Motorrijtuig gelegd beslag, of
 
-                                                                                Policy Conditions
+<!--pagina-->
+                                                                                Policy Conditions
                                                        PRIVATE LEASE AVNL MTPL/MOD 20.25
 
        (b) de invrijheidstelling van een Verzekerde,
@@ -484,7 +495,8 @@ vrouwen bedoeld.
       De Verzekeraar kan de verzekering opzeggen:
        (a) per de eerstvolgende contractsvervaldatum;
 
-                                                                                                                                                   Policy Conditions
+<!--pagina-->
+                                                                                                                                                   Policy Conditions
                                                                                                                          PRIVATE LEASE AVNL MTPL/MOD 20.25
 
             (b) tot 1 maand na de afwikkeling van een schade, met inachtneming van een opzegtermijn van
@@ -539,7 +551,8 @@ vrouwen bedoeld.
             (e) wanneer het Motorrijtuig wordt verkocht, of na afwikkeling van een schade op basis van
                       algeheel verlies, zonder dat een vervangend Motorrijtuig ter verzekering wordt aangeboden.
 
-                                                                                                                                                   Policy Conditions
+<!--pagina-->
+                                                                                                                                                   Policy Conditions
                                                                                                                          PRIVATE LEASE AVNL MTPL/MOD 20.25
 
           Indien het Motorrijtuig wordt verkocht, of na afwikkeling van een schade op basis van algeheel verlies,
@@ -594,7 +607,8 @@ vrouwen bedoeld.
           niet tot overeenstemming, dan benoemen zij in goed overleg een derde deskundige. Deze derde
           deskundige stelt het bedrag van de schade bindend vast. Elk van de partijen draagt de kosten van de
 
-                                                                                                                                                   Policy Conditions
+<!--pagina-->
+                                                                                                                                                   Policy Conditions
                                                                                                                          PRIVATE LEASE AVNL MTPL/MOD 20.25
 
           eigen deskundige; de kosten van de derde deskundige worden door beide partijen elk voor de helft
@@ -623,7 +637,8 @@ vrouwen bedoeld.
           acceptatiebeleid, het beheersen van risico's en het tegengaan van fraude. Op de website van deze
           stichting (www.stichtingcis.nl) kan hun gegevensbeschermingsverklaring worden geraadpleegd.
 
-                                                                                                                                                   Policy Conditions
+<!--pagina-->
+                                                                                                                                                   Policy Conditions
                                                                                                                          PRIVATE LEASE AVNL MTPL/MOD 20.25
 
 17.2 Gegevensbescherming / Registratie persoonsgegevens
@@ -679,7 +694,8 @@ staat is zich uit eigen kracht voort te planten. Daaronder wordt niet begrepen:
             (h) oververhitten, doorbranden; mede verstaan schade aan zaken die bij het nemen van de hier
                       bedoelde maatregelen worden ingezet.
 
-                                                                                                                                                   Policy Conditions
+<!--pagina-->
+                                                                                                                                                   Policy Conditions
                                                                                                                          PRIVATE LEASE AVNL MTPL/MOD 20.25
 
 19. DEKKING
@@ -734,7 +750,8 @@ staat is zich uit eigen kracht voort te planten. Daaronder wordt niet begrepen:
                     van kleding, handbagage en sieraden van de door het motorrijtuig vervoerde personen, niet
                     zijnde de aansprakelijke Verzekerde zelf.
 
-                                                                                                                                                   Policy Conditions
+<!--pagina-->
+                                                                                                                                                   Policy Conditions
                                                                                                                          PRIVATE LEASE AVNL MTPL/MOD 20.25
 
             (g) Verontreiniging van bekleding
@@ -790,7 +807,8 @@ staat is zich uit eigen kracht voort te planten. Daaronder wordt niet begrepen:
                               de weg of te water geraken, ook als dit een gevolg is van een eigen gebrek van het
                               motorrijtuig, alsmede kwaadwillige beschadiging door derden;
 
-                                                                                                                                     Policy Conditions
+<!--pagina-->
+                                                                                                                                     Policy Conditions
                                                                                                            PRIVATE LEASE AVNL MTPL/MOD 20.25
 
         (ii) een ongeval, rechtstreeks veroorzaakt door slijtage, constructie- en / of
@@ -846,7 +864,8 @@ staat is zich uit eigen kracht voort te planten. Daaronder wordt niet begrepen:
 
 (f) Beveiliging
 
-                                                                                                                                                   Policy Conditions
+<!--pagina-->
+                                                                                                                                                   Policy Conditions
                                                                                                                          PRIVATE LEASE AVNL MTPL/MOD 20.25
 
                     Het casco verzekerde Motorrijtuig moet zijn voorzien van een TBBS/TNO goedgekeurde en
@@ -902,7 +921,8 @@ staat is zich uit eigen kracht voort te planten. Daaronder wordt niet begrepen:
 
             (c) Slijtage
 
-                                                                                                                                                   Policy Conditions
+<!--pagina-->
+                                                                                                                                                   Policy Conditions
                                                                                                                          PRIVATE LEASE AVNL MTPL/MOD 20.25
 
                     Schade als gevolg van slijtage, slecht onderhoud en waardevermindering.
@@ -956,7 +976,8 @@ staat is zich uit eigen kracht voort te planten. Daaronder wordt niet begrepen:
 
             (a) bij beschadiging
 
-                                                                                                                                                   Policy Conditions
+<!--pagina-->
+                                                                                                                                                   Policy Conditions
                                                                                                                          PRIVATE LEASE AVNL MTPL/MOD 20.25
 
                     Bij schade aan het motorrijtuig vergoedt de Verzekeraar de reparatiekosten. Vergoed wordt
@@ -1010,13 +1031,15 @@ staat is zich uit eigen kracht voort te planten. Daaronder wordt niet begrepen:
           andere verzekeringen al dan niet van oudere datum, of wanneer de schade gedekt zou zijn als deze
           verzekering niet zou hebben bestaan, loopt deze verzekering alleen als excedent boven de dekking
 
-                                                                                                                                       Policy Conditions
+<!--pagina-->
+                                                                                                                                       Policy Conditions
                                                                                                              PRIVATE LEASE AVNL MTPL/MOD 20.25
 
 die onder de andere verzekering(en) is of wordt verleend. Dit ongeacht of in de andere verzekering(en)
 een samenloop artikel is opgenomen.
 
-                                                                                                                                                   Policy Conditions
+<!--pagina-->
+                                                                                                                                                   Policy Conditions
                                                                                                                          PRIVATE LEASE AVNL MTPL/MOD 20.25
 
 21.3 Financier
@@ -1071,7 +1094,8 @@ een samenloop artikel is opgenomen.
                       opzeggingbrief, tenzij de opzegging verband houdt met de opzet van de Verzekerde om de
                       Verzekeraar te misleiden;
 
-                                                                                                                                                   Policy Conditions
+<!--pagina-->
+                                                                                                                                                   Policy Conditions
                                                                                                                          PRIVATE LEASE AVNL MTPL/MOD 20.25
 
             (c) indien de Verzekeringnemer de verschuldigde premie niet tijdig betaalt; indien een
@@ -1125,7 +1149,8 @@ een samenloop artikel is opgenomen.
             (a) indien de Verzekeraar op grond van de W.A.M. of een daarmee overeenkomstige
                       buitenlandse wet een verplichting tot schadevergoeding heeft;
 
-                                                                                                                                                   Policy Conditions
+<!--pagina-->
+                                                                                                                                                   Policy Conditions
                                                                                                                          PRIVATE LEASE AVNL MTPL/MOD 20.25
 
             (b) indien een cascoschade op grond van andere bepalingen van de verzekeringsvoorwaarden
@@ -1144,3 +1169,5 @@ een samenloop artikel is opgenomen.
             (b) De Verzekeringnemer is verplicht om alle delen van het bij het verzekerde Motorrijtuig
                       behorende kentekenbewijs en / of sleutels, als door Verzekeraar verzocht, aan de
                       Verzekeraar of aan een door de Verzekeraar aan te wijzen partij te overhandigen.
+
+<!--pagina-->

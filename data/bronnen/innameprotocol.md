@@ -1,7 +1,8 @@
-# Innameprotocol (januari 2026)
+# Innameprotocol
 
 > Bron: https://website-justlease-nl-api.justlease.nl/uploads/2026/02/Innamehandleiding-Justlease-2026.pdf
-> Automatisch geconverteerd vanuit PDF op justlease.nl/voorwaarden. Controleer bij twijfel de brondocumenten voor de actuele/juridisch geldende tekst.
+> Versiedatum: januari 2026
+> Automatisch geconverteerd vanuit PDF op justlease.nl/voorwaarden. Controleer bij twijfel het brondocument voor de actuele/juridisch geldende tekst.
 
 Je auto inleveren
 bij Justlease
@@ -9,7 +10,9 @@ bij Justlease
 Zo werktdat!
 
                                                                                   Classification : Internal
-JE LEASEAUTO INLEVEREN
+
+<!--pagina-->
+JE LEASEAUTO INLEVEREN
 
 Wanneer je contractperiode bij Justlease is afgelopen, is het tijd om je auto in te leveren.
 We vertellen je graag hoe dat in z'n werk gaat, zodat je precies weet waar je rekening mee
@@ -29,7 +32,9 @@ controleren, zodat je niet verrast wordt
 wanneer je de auto inlevert.
 
                                                   Classification : Internal
-ZO WERKT HET
+
+<!--pagina-->
+ZO WERKT HET
 
 Vanaf twee weken voor het aflopen van je contract maak je een ophaalafspraak voor de
 auto. We raden je daarnaast aan om een kosteloze schouwing uit te laten voeren. Zo weet
@@ -59,7 +64,9 @@ een aantal werkdagen nog een e-mail met
 een exemplaar van het innamerapport.
 
                                              Classification : Internal
-SCHADE: WAT IS ACCEPTABEL EN WAT NIET?
+
+<!--pagina-->
+SCHADE: WAT IS ACCEPTABEL EN WAT NIET?
 
    Wanneer we je auto controleren op schade, maken we onderscheid tussen acceptabele en
    onacceptabele schade. Acceptabele schade levert je geen extra kosten op. Bij
@@ -94,7 +101,9 @@ belasten wij natuurlijk alleen de lagere
 werkelijke kosten aan je door.
 
                                                    Classification : Internal
-DIT CONTROLEREN WE BIJ DE INNAME VAN JE AUTO
+
+<!--pagina-->
+DIT CONTROLEREN WE BIJ DE INNAME VAN JE AUTO
 
 Wanneer je auto is opgehaald door onze chauffeur, rijdt deze de auto naar ons Arval-
 innamedepot. Hier vindt de inname plaats en controlerenwe zowelhet interieur als het exterieur
@@ -115,7 +124,9 @@ Exterieur                             - Portieren, dorpels en de voor- en
    (bedrijfswagens)
 
                                       Classification : Internal
-Wat is wel en niet acceptabel?
+
+<!--pagina-->
+Wat is wel en niet acceptabel?
 
 Interieur
 
@@ -150,7 +161,9 @@ Niet acceptabel
    bagageruimte.
 
                                                                                   Classification : Internal
-Krassen in de lak
+
+<!--pagina-->
+Krassen in de lak
 
 Toets het zelf! Wanneer je de kras nat maakt en de kras is niet zichtbaar, dan is deze niet door
 de lak heen. Blijft de kras ondanks het natmaken toch zichtbaar, dan is deze door de lak heen.
@@ -176,7 +189,9 @@ Niet acceptabel
    Barst(en) of krassen in ruiten.
 
                                                                                   Classification : Internal
-Licht beschadigde velgen en wieldoppen
+
+<!--pagina-->
+Licht beschadigde velgen en wieldoppen
 
 Acceptabel
 - De velgen die bevestigd zijn met alle daarvoor bestemde
@@ -190,7 +205,9 @@ Acceptabel
    gescheurd.
 
                                            Classification : Internal
-                                                                   Hagelschade
+
+<!--pagina-->
+                                                                   Hagelschade
 
                                                                      Niet acceptabel
 
@@ -217,7 +234,9 @@ Zijn de vogeluitwerpselen in de lak gebrand, dan wordt dit gezien
 als niet- acceptabele schade.
 
                                                                                   Classification : Internal
-DIT IS OOK BELANGRIJK: SCHOON EN COMPLEET
+
+<!--pagina-->
+DIT IS OOK BELANGRIJK: SCHOON EN COMPLEET
 
 Om hetinleveren vanjeautosnel en                     je auto in met alles wat bij de auto aanwezig
 gemakkelijk te laten verlopen, is het belangrijk     was op het moment dat je deze in ontvangst
@@ -253,13 +272,17 @@ Met deze handige checklist lever je je auto direct compleet in.
       Zorg ervoor dat je alle priv-bezittingen uit de auto hebt gehaald
 
                                                   Classification : Internal
-In de periode oktober tot en met maart mag jede auto inleveren op winterbanden. In de periode
+
+<!--pagina-->
+In de periode oktober tot en met maart mag jede auto inleveren op winterbanden. In de periode
 april tot en met september moet de auto ingeleverd worden op zomerbanden
 Indien je auto is geleverd met lichtmetalen velgen, dan mag je de autoniet inleveren op stalen
 velgen met zomer- of winterbanden.
 
                                                                              Classification : Internal
-Het inleveren van jouw auto
+
+<!--pagina-->
+Het inleveren van jouw auto
 
 Het inleveren van jouw auto is super simpel; het enige wat je hoeft te doen is een
 ophaalafspraak maken! Je bent hier zelf verantwoordelijk voor. Wij doen de rest voor je.
@@ -302,7 +325,9 @@ auto om je definitieve afspraak in te
 plannen.
 
           Classification : Internal
-Kosten voor ontbrekende accessoires, onaangename geuren en
+
+<!--pagina-->
+Kosten voor ontbrekende accessoires, onaangename geuren en
 vervuiling van het interieur
 
 Bij de inname van jouw leaseauto wordt een inspectierapport opgesteld waarin eventuele
@@ -340,7 +365,9 @@ kosten staan los van een eventuele ozonbehandeling die nodig is om de geur te ve
 De prijzen zijn inclusief BTW.
 
                                              Classification : Internal
-EINDAFREKENING                                        je toch binnen het totaalaantal kilometers van
+
+<!--pagina-->
+EINDAFREKENING                                        je toch binnen het totaalaantal kilometers van
                                                       jouw bundel over de gehele contractperiode
 Binnen een maand nadat je jouw auto hebt              bent gebleven? Dan krijg je een eventuele
 ingeleverd, sturen wij de eindfactuur voor het        eerdere afrekening weer van ons terug.
@@ -372,3 +399,5 @@ justlease.nl/service-en-contact of neem contact
 met ons op via 030 850 1500.
 
                                                    Classification : Internal
+
+<!--pagina-->

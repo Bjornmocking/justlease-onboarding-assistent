@@ -1,7 +1,8 @@
 # Algemene Voorwaarden Keurmerk Private Lease
 
 > Bron: https://portal.justlease.nl/app/uploads/2018/06/Algemene-voorwaarden-Keurmerk-Private-Lease-01-12-2017.pdf
-> Automatisch geconverteerd vanuit PDF op justlease.nl/voorwaarden. Controleer bij twijfel de brondocumenten voor de actuele/juridisch geldende tekst.
+> Versiedatum: 1 december 2017 (versie 1.1)
+> Automatisch geconverteerd vanuit PDF op justlease.nl/voorwaarden. Controleer bij twijfel het brondocument voor de actuele/juridisch geldende tekst.
 
 ALGEMENE VOORWAARDEN
 
@@ -9,7 +10,9 @@ KEURMERK PRIVATE LEASE
 
 Versie: 1.1
 01-12-2017
-A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
+
+<!--pagina-->
+A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
 
 Deze Algemene voorwaarden zijn tot stand gekomen in overleg met de Consumentenbond in het kader van de Co-rdinatiegroep
 Zelfreguleringsoverleg van de Sociaal Economische Raad en treden in werking per 1 december 2017.
@@ -58,7 +61,8 @@ gesloten tussen een consument en een leasemaatschappij die is aangesloten bij he
 De leasemaatschappij verklaart op het moment van afsluiten van de overeenkomst de meest recente versie van deze voorwaarden
 van toepassing.
 
-A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
+<!--pagina-->
+A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
 
 C. HET AANBOD/DE OFFERTE
 
@@ -125,7 +129,8 @@ De bepalingen in het leasecontract, de Aanvullende voorwaarden, het innameprotoc
 mogen niet in uw nadeel afwijken van deze Algemene voorwaarden. Als dat toch gebeurt, gaan deze Algemene voorwaarden
 voor.
 
-A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
+<!--pagina-->
+A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
 
 E. REGISTRATIE VAN DE OVEREENKOMST EN BETALINGSACHTERSTANDEN
 2. Worden de leaseovereenkomst en eventuele betalingsachterstanden geregistreerd bij het BKR?
@@ -159,7 +164,8 @@ dan kunt u afstand doen van uw bedenktijd. Dit doet u door het leasecontract in 
 leasemaatschappij in het bedrijfspand van de leasemaatschappij te ondertekenen en daarbij schriftelijk kenbaar te maken dat u
 direct over het voertuig wil beschikken.
 
-A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
+<!--pagina-->
+A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
 
 5. Wanneer kan ik het voertuig ophalen?
 U kunt het voertuig ophalen zodra de bedenktijd is verstreken, zonder dat u de leaseovereenkomst hebt ontbonden of als de
@@ -214,7 +220,8 @@ dan gelijk.
 11. Staat het kenteken op mijn naam of op naam van de leasemaatschappij?
 In de Aanvullende voorwaarden is bepaald of het kenteken op uw naam of op naam van de leasemaatschappij wordt gesteld.
 
-A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
+<!--pagina-->
+A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
 
 H. HET TERMIJNBEDRAG, WIJZIGING VAN HET TERMIJNBEDRAG, MEERKILOMETERS EN DE WAARBORGSOM
 
@@ -269,7 +276,8 @@ de leasemaatschappij een bedrag in rekening brengen op basis van een redelijke s
 aanwezig, kan een nota van een reparatie- of onderhoudsbedrijf waarop de kilometerstand is vermeld, voor die schatting gebruikt
 worden. Als de kilometerteller defect raakt, moet u dat direct aan de leasemaatschappij melden.
 
-A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
+<!--pagina-->
+A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
 
 Indien u in verband met meerkilometers een aanvullend bedrag moest betalen, kan de leasemaatschappij verlangen dat u tot
 het volgende moment waarop meerkilometers afgerekend zullen worden, maandelijks in aanvulling op het termijnbedrag een
@@ -326,7 +334,8 @@ leasemaatschappij incasso kosten bij u in rekening brengen. De hoogte daarvan ha
 in het `Besluit vergoeding voor buitengerechtelijke incassokosten'. In de aanmaning wordt u op deze gevolgen van niet-tijdige
 betaling gewezen, onder vermelding van de hoogte van het bedrag van de incassokosten.
 
-A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
+<!--pagina-->
+A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
 
 22. Wat kan er verder gebeuren als het termijnbedrag of andere bedragen niet tijdig betaald worden?
 De leasemaatschappij kan de overeenkomst dan ontbinden. Dan moet u naast de openstaande bedragen ook een
@@ -384,7 +393,8 @@ terug. Een verhoging van de eigen bijdrage in verband met dat schadegeval wordt 
 De eigen bijdrage is nooit hoger dan  500,- per schadegeval v--r de hiervoor genoemde verhoging en is nooit hoger dan  1.000,-
 per schadegeval na de hiervoor genoemde verhoging.
 
-A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
+<!--pagina-->
+A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
 
 27. Zijn er andere verzekeringen van toepassing?
 Als er een schadeverzekering inzittenden, persoonlijke ongevallenverzekering en/of verhaalsrechtsbijstandsverzekering van
@@ -440,7 +450,8 @@ betrouwbaarheids- of rijvaardigheidsritten. Ook mag het voertuig niet worden geb
 Het voertuig mag worden bestuurd door een zeventienjarige in het kader van begeleid rijden ("2todrive"), behalve als in de
 Aanvullende voorwaarden is bepaald dat dit niet is toegestaan.
 
-A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
+<!--pagina-->
+A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
 
 Met het voertuig mogen geen gevaarlijke stoffen worden vervoerd.
 
@@ -494,7 +505,8 @@ reparatie. Als de toestemming wordt gegeven, kunt u de reparatie laten verrichte
 
 De leasemaatschappij zal zich inspannen om ervoor te zorgen dat het voertuig zo spoedig mogelijk weer gebruikt kan worden.
 
-A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
+<!--pagina-->
+A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
 
 38. Wie betaalt de kosten van reparatie en van onderhoudsbeurten?
 De leasemaatschappij betaalt de kosten voor reparatie of de onderhoudsbeurt rechtstreeks aan het garagebedrijf, op voorwaarde
@@ -548,7 +560,8 @@ Bent u gestrand met het voertuig en heeft u geen recht op kosteloze pechhulp, bi
 U kunt dan de leasemaatschappij vragen om hulp, maar u dient wel zelf de kosten te betalen. De leasemaatschappij zal zoveel als
 redelijkerwijs mogelijk proberen aan uw verzoek tegemoet te komen.
 
-A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
+<!--pagina-->
+A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
 
 O. BESLAG OP HET VOERTUIG EN BOETES
 
@@ -603,7 +616,8 @@ zal samen met u tot een redelijke oplossing proberen te komen voor de betaling v
 betaalregeling aan te bieden. Als een betaalregeling wordt overeengekomen, geldt de bepaling dat de opzeggingsvergoeding moet
 zijn betaald v--r de dag waartegen is opgezegd, niet.
 
-A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
+<!--pagina-->
+A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
 
 47. Hoe wordt de hoogte van de opzeggingsvergoeding bepaald bij opzegging na het eerste jaar?
 Bij opzegging tegen het begin van het tweede jaar van de leaseperiode of tegen een latere dag geldt voor de opzeggingsvergoeding
@@ -653,7 +667,8 @@ tot het moment van inlevering het termijnbedrag en andere openstaande bedragen t
 Als het leasecontract is ondertekend door twee personen en de andere persoon niet is overleden, kan de leaseovereenkomst niet
 wegens uw overlijden worden opgezegd. De andere persoon wordt dan de enige contractspartner.
 
-A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
+<!--pagina-->
+A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
 
 Q. ONTBINDING VAN DE LEASEOVEREENKOMST
 
@@ -703,7 +718,8 @@ Als het voertuig een gebrek heeft, is de leasemaatschappij voor schade die daarv
 leasemaatschappij het gebrek bij het aangaan van de leaseovereenkomst kende of behoorde te kennen of als het ontstaan van het
 gebrek is toe te rekenen aan de leasemaatschappij.
 
-A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
+<!--pagina-->
+A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
 
 S. ADRESWIJZIGING
 
@@ -754,7 +770,8 @@ In geval van faillissement, surseance van betaling of bedrijfsbe-indiging van de
 Lease een bedrag tot maximaal  3.000,- per geschil uit en geldt de garantstelling alleen als het faillissement of de surseance is
 uitgesproken of de leasemaatschappij haar bedrijf heeft be-indigd nadat de Geschillencommissie uitspraak heeft gedaan.
 
-A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
+<!--pagina-->
+A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
 
 U. WIJZIGING VAN DE LEASEOVEREENKOMST
 
@@ -806,7 +823,8 @@ de maatstaven zoals vermeld in de richtlijnen voor inname van de leasemaatschapp
 Innameprotocol is namelijk een omschrijving opgenomen van de bij de inname van voertuigen meest geconstateerde schades en
 verontreinigingen. Daarbij is telkens vermeld in hoeverre dergelijke schade voor uw rekening komt.
 
-A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
+<!--pagina-->
+A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
 
 Staat de schade niet vermeld in het Innameprotocol, dan hanteert de leasemaatschappij onderstaande maatstaven.
 Verontreinigingen en schades die niet zijn omschreven in dit Innameprotocol komen voor uw rekening als die bij zorgvuldig gebruik
@@ -864,7 +882,8 @@ Als het voertuig niet meer voor expertise beschikbaar is en de expert aan de han
 bewijsstukken geen oordeel kan vellen, bent u niet aansprakelijk voor bij inlevering geconstateerde schade die volgens dit artikel
 moet worden afgehandeld.
 
-A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
+<!--pagina-->
+A L G E M E N E V O O R WA A R D E N I KEURMERK PRIVATE LEASE
 
 X. PERSOONSREGISTRATIE
 65. Worden mijn persoonsgegevens geregistreerd?
@@ -874,3 +893,5 @@ Daarnaast neemt de leasemaatschappij uw persoonsgegevens op in een interne perso
 kunnen uitvoeren, wettelijke verplichtingen te kunnen nakomen en om op de persoon gerichte productinformatie te kunnen
 geven. Als u bezwaar hebt tegen gebruik van uw gegevens om op de persoon gerichte productinformatie te verstrekken, kunt u dat
 aan de leasemaatschappij berichten. Dan zal aan uw bezwaar worden tegemoetgekomen.
+
+<!--pagina-->

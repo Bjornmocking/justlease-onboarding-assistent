@@ -10,6 +10,8 @@ Portaal voor nieuwe salesmedewerkers bij Justlease, in de huisstijl van justleas
 
 ## Inhoud aanpassen
 
+- **Werkverdeling en grenzen** (sales/klantenservice, wat de assistent niet mag zeggen): [`data/werkwijze.md`](data/werkwijze.md). Dit bestand wordt bij elke vraag volledig meegegeven. De regels voor de assistent staan in `api/chat.js`.
+- **Versiedatum en pagina's**: elk bronbestand in `data/bronnen/` heeft bovenaan `> Versiedatum: ...` en `<!--pagina-->` bij elke paginawissel. De chatbot toont die onder elk antwoord.
 - **Documenten voor de chatbot**: `.md`-bestanden onder [`data/`](data), met de officiële
   documenten in [`data/bronnen/`](data/bronnen). Elk bestand wordt automatisch meegenomen.
   De documentenlijst op de pagina staat bovenaan [`script.js`](script.js).
@@ -25,6 +27,10 @@ Portaal voor nieuwe salesmedewerkers bij Justlease, in de huisstijl van justleas
   en reservemodellen.
 - De quiz gebruikt geen AI en heeft dus geen API-key of quotum nodig.
 - API-key uitsluitend via de environment variable `GEMINI_API_KEY`, nooit in code of Git.
+
+## Testset chatbot
+
+`node test/chat-testset.js` stuurt veelgestelde vragen naar de live chatbot en controleert de antwoorden (verbruikt Gemini-quotum). Voeg eigen vragen toe in `test/chat-testset.js`.
 
 ## Lokaal draaien
 

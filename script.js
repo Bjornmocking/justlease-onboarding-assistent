@@ -1,41 +1,49 @@
 const DOCUMENTS = [
   {
     title: 'Algemene voorwaarden Keurmerk Private Lease',
+    version: '1 december 2017',
     desc: 'De basisvoorwaarden voor elke private lease-overeenkomst.',
     url: 'https://portal.justlease.nl/app/uploads/2018/06/Algemene-voorwaarden-Keurmerk-Private-Lease-01-12-2017.pdf',
   },
   {
     title: 'Aanvullende voorwaarden Justlease',
+    version: 'januari 2026',
     desc: 'Eigen bijdrage, opzegging, vervangend vervoer en schade (januari 2026).',
     url: 'https://website-justlease-nl-api.justlease.nl/uploads/2026/01/Justlease-aanvullende-voorwaarden-versie-jan2026.docx.pdf',
   },
   {
     title: 'Kredietcheck: aan te leveren documenten',
+    version: 'november 2025',
     desc: 'Welke documenten een klant moet aanleveren bij een aanvraag.',
     url: 'https://website-justlease-nl-api.justlease.nl/uploads/2025/10/Justlease_Aanleveren-documenten.pdf',
   },
   {
     title: 'Innameprotocol',
+    version: 'januari 2026',
     desc: 'Hoe schade en staat van de auto worden beoordeeld bij inleveren.',
     url: 'https://website-justlease-nl-api.justlease.nl/uploads/2026/02/Innamehandleiding-Justlease-2026.pdf',
   },
   {
     title: 'Verzekeringskaart WA + Casco',
+    version: 'versie 20.25 (2025)',
     desc: 'Korte samenvatting van de dekking.',
     url: 'https://website-justlease-nl-api.justlease.nl/uploads/2025/01/IPID-NL-Version-MTPLMODv20.25.pdf',
   },
   {
     title: 'Verzekeringskaart aanvullende verzekeringen',
+    version: 'versie 20.25 (2025)',
     desc: 'Korte samenvatting van de aanvullende dekking.',
     url: 'https://website-justlease-nl-api.justlease.nl/uploads/2025/01/AVNLLDPA20.25-Aanvullende-verzekeringen-SVI-POI-documents-PL.pdf',
   },
   {
     title: 'Algemene verzekeringsvoorwaarden',
+    version: 'versie 20.25 (2025)',
     desc: 'Volledige voorwaarden WA en Casco.',
     url: 'https://website-justlease-nl-api.justlease.nl/uploads/2025/01/Verzekeringsvoorwaarden-AVNL-MTPLMOD-20.25-PL.pdf',
   },
   {
     title: 'Aanvullende verzekeringsvoorwaarden',
+    version: 'versie 20.25 (2025)',
     desc: 'Volledige voorwaarden aanvullende verzekeringen.',
     url: 'https://website-justlease-nl-api.justlease.nl/uploads/2025/01/AVNLLDPA20.25.0-Aanvullende-voorwaarden-Greenval-Policy-Conditions-NL.pdf',
   },
@@ -51,7 +59,7 @@ DOCUMENTS.forEach((doc) => {
   a.textContent = doc.title;
   const desc = document.createElement('div');
   desc.className = 'doc-desc';
-  desc.textContent = doc.desc;
+  desc.textContent = `${doc.desc} Versie: ${doc.version}.`;
   li.append(a, desc);
   docListEl.appendChild(li);
 });
@@ -164,10 +172,32 @@ const formEl = document.getElementById('chat-form');
 const inputEl = document.getElementById('question-input');
 const sendButton = document.getElementById('send-button');
 
-function addMessage(text, role) {
+function addMessage(text, role, sources) {
   const el = document.createElement('div');
   el.className = `message ${role}`;
   el.textContent = text;
+  if (sources && sources.length) {
+    const box = document.createElement('div');
+    box.className = 'message-sources';
+    box.append('Bron: ');
+    sources.forEach((src, i) => {
+      if (i > 0) box.append('; ');
+      let label;
+      if (src.url) {
+        label = document.createElement('a');
+        label.href = src.url;
+        label.target = '_blank';
+        label.rel = 'noopener';
+      } else {
+        label = document.createElement('span');
+      }
+      label.textContent = src.title;
+      box.appendChild(label);
+      const details = [src.version && `versie: ${src.version}`, src.pages].filter(Boolean).join(', ');
+      if (details) box.append(` (${details})`);
+    });
+    el.appendChild(box);
+  }
   chatEl.appendChild(el);
   chatEl.scrollTop = chatEl.scrollHeight;
   return el;
@@ -198,7 +228,7 @@ formEl.addEventListener('submit', async (event) => {
     if (!response.ok) {
       addMessage(data.error || 'Er ging iets mis.', 'error');
     } else {
-      addMessage(data.answer, 'assistant');
+      addMessage(data.answer, 'assistant', data.sources);
     }
   } catch (err) {
     pending.remove();

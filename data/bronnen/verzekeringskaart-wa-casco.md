@@ -1,7 +1,8 @@
 # Verzekeringskaart WA + Casco
 
 > Bron: https://website-justlease-nl-api.justlease.nl/uploads/2025/01/IPID-NL-Version-MTPLMODv20.25.pdf
-> Automatisch geconverteerd vanuit PDF op justlease.nl/voorwaarden. Controleer bij twijfel de brondocumenten voor de actuele/juridisch geldende tekst.
+> Versiedatum: versie MTPLMOD v20.25 (2025)
+> Automatisch geconverteerd vanuit PDF op justlease.nl/voorwaarden. Controleer bij twijfel het brondocument voor de actuele/juridisch geldende tekst.
 
 AUTOVERZEKERING                                      GREENVAL INSURANCE DAC
 
@@ -57,7 +58,9 @@ Schade aan uw voertuig (Casco)                       anderen (WA), maar in dit g
 ! Excess: for some damage to your own car you pay part yourself; this is also the case when the security requirements
 
     are not met; this amount is stated in your policy
-          Waar ben ik gedekt??
+
+<!--pagina-->
+          Waar ben ik gedekt??
              Deze verzekering dekt schade in de landen van de Europese Unie. Daarbuiten bent u ook verzekerd in de landen
              die staan vermeld op de Groene kaart van uw verzekering en die niet zijn doorgekruist.
 
@@ -79,3 +82,5 @@ jaarlijks op 1 januari, tenzij u opzegt of het voertuig inlevert.
            Hoe zeg ik mijn contract op?
 
 U kunt de verzekering schriftelijk via Arval Nederland opzeggen met een opzegtermijn van drie maanden.
+
+<!--pagina-->

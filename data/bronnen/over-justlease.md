@@ -1,5 +1,6 @@
 # Over Justlease: geschiedenis en kerncijfers
 
+> Versiedatum: 23 september 2026 (opgehaald van justlease.nl)
 > Bronnen: justlease.nl/over-justlease, justlease.nl/private-lease-bij-justlease en het persbericht van Arval over de overname van Terberg Business Lease Group (arval.com, december 2022).
 
 ## Wie is Justlease

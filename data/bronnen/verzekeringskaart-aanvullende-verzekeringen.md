@@ -1,7 +1,8 @@
 # Verzekeringskaart Aanvullende Verzekeringen
 
 > Bron: https://website-justlease-nl-api.justlease.nl/uploads/2025/01/AVNLLDPA20.25-Aanvullende-verzekeringen-SVI-POI-documents-PL.pdf
-> Automatisch geconverteerd vanuit PDF op justlease.nl/voorwaarden. Controleer bij twijfel de brondocumenten voor de actuele/juridisch geldende tekst.
+> Versiedatum: versie 20.25 (2025)
+> Automatisch geconverteerd vanuit PDF op justlease.nl/voorwaarden. Controleer bij twijfel het brondocument voor de actuele/juridisch geldende tekst.
 
 AANVULLENDE AUTOVERZEKERING                       GREENVAL INSURANCE DAC
 
@@ -63,7 +64,9 @@ bijstand. U kan kiezen welke onderdelen van deze verzekering op u van toepassing
                                                        Casco verzekering.
 
 IPID Aanvullende dekkingen Private lease
-       Waar ben ik gedekt
+
+<!--pagina-->
+       Waar ben ik gedekt
 
 Deze verzekering dekt schade in de landen van de Europese Unie. Daarbuiten bent u ook verzekerd in de
 landen die staan vermeld op de Groene kaart van uw verzekering en die niet zijn doorgekruist.
@@ -90,3 +93,5 @@ en hernieuwd jaarlijks op 1 januari, tenzij u opzegt of het voertuig inlevert.
 U kunt de verzekering schriftelijk via Arval Nederland opzeggen met een opzegtermijn van drie maanden.
 
       IPID Aanvullende dekkingen Private lease
+
+<!--pagina-->
