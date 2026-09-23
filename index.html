@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Justlease Onboarding Assistent</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>Justlease Onboarding Assistent</h1>
+      <p class="subtitle">Stel een vraag over het verkoopdraaiboek</p>
+    </header>
+
+    <main class="chat" id="chat">
+      <div class="message assistant">
+        Hoi! Ik help je op weg met het Justlease-verkoopdraaiboek. Stel gerust een vraag.
+      </div>
+    </main>
+
+    <form class="input-bar" id="chat-form">
+      <input
+        type="text"
+        id="question-input"
+        placeholder="Bijvoorbeeld: Hoe open ik een verkoopgesprek?"
+        autocomplete="off"
+        required
+      />
+      <button type="submit" id="send-button">Verstuur</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

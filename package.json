@@ -1,0 +1,9 @@
+{
+  "name": "justlease-onboarding-assistent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-onboarding-assistent voor de salesafdeling van Justlease.",
+  "engines": {
+    "node": ">=18"
+  }
+}
