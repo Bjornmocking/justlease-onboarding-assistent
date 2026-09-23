@@ -155,7 +155,7 @@ function showTab(tab) {
 navItems.forEach((btn) => btn.addEventListener('click', () => showTab(btn.dataset.tab)));
 document.querySelector('[data-tab-link]').addEventListener('click', (e) => {
   e.preventDefault();
-  showTab('about');
+  showTab('info');
 });
 
 // Chat

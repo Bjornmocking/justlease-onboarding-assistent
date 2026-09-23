@@ -3,10 +3,10 @@
 Portaal voor nieuwe salesmedewerkers bij Justlease, in de huisstijl van justlease.nl
 (wit, navy `#0938A1`, oranje `#FF8B1F`, Oswald + Roboto Condensed). Drie onderdelen:
 
-- **Over Justlease**: geschiedenis, kerncijfers en wat we klanten bieden (gegevens bovenaan `script.js`).
 - **Informatie**: overzicht van de belangrijkste documenten en een chatbot die vragen
   beantwoordt op basis van die documenten.
 - **Kennisquiz**: één eindtoets met vaste vragen, zoals klanten ze aan de telefoon stellen.
+- **Over Justlease**: geschiedenis, kerncijfers en wat we klanten bieden (gegevens bovenaan `script.js`).
 
 ## Inhoud aanpassen
 
