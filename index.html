@@ -3,34 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Justlease Onboarding Assistent</title>
+  <title>Justlease Sales Onboarding</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Roboto+Condensed:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="app">
     <header class="app-header">
-      <h1>Justlease Onboarding Assistent</h1>
-      <p class="subtitle">Stel een vraag over het verkoopdraaiboek</p>
+      <div class="logo">
+        <span class="logo-just">JUST</span><span class="logo-lease">LEASE</span>
+      </div>
+      <p class="subtitle">Sales Onboarding</p>
     </header>
 
-    <main class="chat" id="chat">
-      <div class="message assistant">
-        Hoi! Ik help je op weg met het Justlease-verkoopdraaiboek. Stel gerust een vraag.
-      </div>
-    </main>
+    <nav class="tabs">
+      <button class="tab-button active" data-tab="chat">Chatbot</button>
+      <button class="tab-button" data-tab="quiz">Kennistoets</button>
+    </nav>
 
-    <form class="input-bar" id="chat-form">
-      <input
-        type="text"
-        id="question-input"
-        placeholder="Bijvoorbeeld: Hoe open ik een verkoopgesprek?"
-        autocomplete="off"
-        required
-      />
-      <button type="submit" id="send-button">Verstuur</button>
-    </form>
+    <section class="tab-panel" id="panel-chat">
+      <main class="chat" id="chat">
+        <div class="message assistant">
+          Hoi! Ik help je op weg met het Justlease-verkoopdraaiboek en de voorwaarden.
+          Stel gerust een vraag.
+        </div>
+      </main>
+
+      <form class="input-bar" id="chat-form">
+        <input
+          type="text"
+          id="question-input"
+          placeholder="Bijvoorbeeld: Wat valt onder de Fair Use Policy?"
+          autocomplete="off"
+          required
+        />
+        <button type="submit" id="send-button">Verstuur</button>
+      </form>
+    </section>
+
+    <section class="tab-panel hidden" id="panel-quiz">
+      <div class="quiz-controls">
+        <label for="topic-select">Onderwerp</label>
+        <select id="topic-select">
+          <option value="all">Alle onderwerpen</option>
+        </select>
+        <button id="generate-quiz-button" type="button">Genereer kennistoets</button>
+      </div>
+
+      <div id="quiz-container" class="quiz-container">
+        <p class="quiz-placeholder">
+          Kies eventueel een onderwerp en genereer een kennistoets om je kennis te testen
+          zonder een collega te hoeven vragen.
+        </p>
+      </div>
+    </section>
   </div>
 
   <script src="script.js"></script>
+  <script src="quiz.js"></script>
 </body>
 </html>

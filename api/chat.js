@@ -1,28 +1,14 @@
-const fs = require('fs');
-const path = require('path');
+const { loadAllContent, isContentEmpty } = require('../lib/content');
 
-const CONTENT_PATH = path.join(__dirname, '..', 'data', 'onboarding-content.md');
 const MODEL = 'gemini-2.0-flash';
-
-function readSourceContent() {
-  try {
-    return fs.readFileSync(CONTENT_PATH, 'utf-8');
-  } catch (err) {
-    return '';
-  }
-}
-
-function isContentEmpty(raw) {
-  const withoutComments = raw.replace(/<!--[\s\S]*?-->/g, '');
-  return withoutComments.trim().length === 0;
-}
 
 function buildSystemInstruction(sourceContent) {
   return [
     'Je bent een onboarding-assistent voor nieuwe salesmedewerkers bij Justlease.',
-    'Je beantwoordt vragen over het verkoopdraaiboek uitsluitend op basis van de brondocumentatie hieronder.',
+    'Je beantwoordt vragen over het verkoopdraaiboek en de Justlease-voorwaarden uitsluitend op basis van de brondocumentatie hieronder.',
     'Antwoord kort en praktisch, gericht op iemand die net begint.',
     'Als het antwoord niet in de brondocumentatie staat, geef dat expliciet aan in plaats van iets te verzinnen.',
+    'Verwijs waar relevant naar het onderliggende document (bijvoorbeeld "zie de Aanvullende Voorwaarden Justlease").',
     '',
     '--- BRONDOCUMENTATIE ---',
     sourceContent,
@@ -42,12 +28,12 @@ module.exports = async (req, res) => {
     return;
   }
 
-  const sourceContent = readSourceContent();
+  const sourceContent = loadAllContent();
 
   if (isContentEmpty(sourceContent)) {
     res.status(200).json({
       answer:
-        'Er is nog geen brondocumentatie ingeladen. Zodra het Justlease-verkoopdraaiboek is toegevoegd aan data/onboarding-content.md, kan ik hier vragen over beantwoorden.',
+        'Er is nog geen brondocumentatie ingeladen. Zodra het Justlease-verkoopdraaiboek is toegevoegd aan de data-map, kan ik hier vragen over beantwoorden.',
     });
     return;
   }

@@ -1,3 +1,21 @@
+// Tab switching
+const tabButtons = document.querySelectorAll('.tab-button');
+const panels = {
+  chat: document.getElementById('panel-chat'),
+  quiz: document.getElementById('panel-quiz'),
+};
+
+tabButtons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    tabButtons.forEach((b) => b.classList.remove('active'));
+    btn.classList.add('active');
+    Object.entries(panels).forEach(([key, panel]) => {
+      panel.classList.toggle('hidden', key !== btn.dataset.tab);
+    });
+  });
+});
+
+// Chat
 const chatEl = document.getElementById('chat');
 const formEl = document.getElementById('chat-form');
 const inputEl = document.getElementById('question-input');
