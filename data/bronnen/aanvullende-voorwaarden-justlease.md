@@ -2,6 +2,7 @@
 
 > Bron: https://website-justlease-nl-api.justlease.nl/uploads/2026/01/Justlease-aanvullende-voorwaarden-versie-jan2026.docx.pdf
 > Versiedatum: januari 2026
+> Rang: LEIDEND. Bij verschil tussen bronnen gaat deze tekst voor.
 > Automatisch geconverteerd vanuit PDF op justlease.nl/voorwaarden. Controleer bij twijfel het brondocument voor de actuele/juridisch geldende tekst.
 
 AANVULLENDE VOORWAARDEN JUSTLEASE

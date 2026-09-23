@@ -2,6 +2,7 @@
 
 > Bron: https://portal.justlease.nl/app/uploads/2018/06/Algemene-voorwaarden-Keurmerk-Private-Lease-01-12-2017.pdf
 > Versiedatum: 1 december 2017 (versie 1.1)
+> Rang: algemeen kader van het Keurmerk Private Lease. Bij verschil gaan de Aanvullende Voorwaarden Justlease voor.
 > Automatisch geconverteerd vanuit PDF op justlease.nl/voorwaarden. Controleer bij twijfel het brondocument voor de actuele/juridisch geldende tekst.
 
 ALGEMENE VOORWAARDEN

@@ -21,6 +21,8 @@ const TESTS = [
   { q: 'Wanneer is een deukje acceptabele gebruikersschade bij inleveren?', all: [/2-?\s?euromunt|twee euromunt/i] },
   { q: 'Waar staat de groene kaart?', all: [/MyLeez|My Leez/i] },
   { q: 'Sinds wanneer is Justlease onderdeel van Arval?', all: [/2022/] },
+  { q: 'Wat gebeurt er met het contract als een van de twee contractpartners overlijdt?', all: [/kosteloos/i] },
+  { q: 'Wat betekent hoofdelijk aansprakelijk bij een medecontractant?', all: [/volledig|hele|gehele/i] },
   // Werkverdeling
   { q: 'Wie doet de levering van de auto?', all: [/klantenservice/i] },
   { q: 'Een klant met een rijdende auto wil zijn contract verlengen. Wie pakt dat op?', all: [/sales/i] },

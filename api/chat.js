@@ -13,6 +13,7 @@ function buildSystemInstruction(passages, werkwijze) {
     'BRONNEN EN WAARHEID',
     '- Gebruik uitsluitend de passages en de werkwijze hieronder. Verzin niets en gebruik geen algemene kennis over leasen.',
     '- Als de passages het antwoord niet bevatten, zeg dat eerlijk en verwijs naar een senior of manager.',
+    '- Als bronnen elkaar tegenspreken, gaan de Aanvullende Voorwaarden Justlease (januari 2026) altijd voor. De Algemene Voorwaarden Keurmerk Private Lease zijn alleen het algemene kader. Geef het antwoord uit de Aanvullende Voorwaarden en vermeld kort dat het Keurmerk-document iets anders of algemener zegt, zodat de medewerker weet welke bron leidend is.',
     '- De werkwijze [W] bepaalt of een onderwerp bij sales, klantenservice of de financiële afdeling hoort. Noem dat expliciet als de vraag daarover gaat.',
     '',
     'GRENZEN',
