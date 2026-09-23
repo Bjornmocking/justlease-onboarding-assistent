@@ -8,20 +8,20 @@ const DELAY_MS = 4000;
 const ESCALATE = /senior|manager|ervaren collega/i;
 
 const TESTS = [
-  { q: 'Wat moet een klant aanleveren voor de kredietcheck?', all: [/rijbewijs/i, /bankafschrift/i] },
+  { q: 'Wat moet een klant aanleveren voor de kredietcheck?', all: [/rijbewijs/i, /bankafschrift/i], none: [/weet ik niet zeker|senior of manager/i] },
   { q: 'Hoe oud mag een loonstrook zijn?', all: [/twee maanden|2 maanden/i] },
   { q: 'Wat heeft een klant met een tijdelijk contract extra nodig?', all: [/werkgeversverklaring/i] },
   { q: 'Hoe lang moet de onderneming van een zzp-er bestaan?', all: [/12 maanden|twaalf maanden/i] },
   { q: 'Wat is het eigen risico bij het Comfort Pakket?', all: [/325/] },
-  { q: 'Binnen hoeveel uur moet een klant schade melden?', all: [/48/] },
-  { q: 'Hoeveel bedenktijd heeft een klant?', all: [/14 dagen/i] },
+  { q: 'Binnen hoeveel uur moet een klant schade melden?', all: [/48/], none: [/weet ik niet zeker|senior of manager/i] },
+  { q: 'Hoeveel bedenktijd heeft een klant?', all: [/14 dagen/i], none: [/weet ik niet zeker|senior of manager/i] },
   { q: 'Wat kost tussentijds opzeggen?', all: [/50\s?%|50 procent/i] },
   { q: 'Hoe hoog mag de waarborgsom zijn?', all: [/3 maal|drie maal|3 keer|driemaal/i] },
   { q: 'Waar moet de klant de auto laten onderhouden?', all: [/BOVAG/i] },
   { q: 'Wanneer is een deukje acceptabele gebruikersschade bij inleveren?', all: [/2-?\s?euromunt|twee euromunt/i] },
   { q: 'Waar staat de groene kaart?', all: [/MyLeez|My Leez/i] },
   { q: 'Sinds wanneer is Justlease onderdeel van Arval?', all: [/2022/] },
-  { q: 'Wat gebeurt er met het contract als een van de twee contractpartners overlijdt?', all: [/kosteloos/i] },
+  { q: 'Wat gebeurt er met het contract als een van de twee contractpartners overlijdt?', all: [/kosteloos/i], none: [/weet ik niet zeker|senior of manager/i] },
   { q: 'Wat betekent hoofdelijk aansprakelijk bij een medecontractant?', all: [/volledig|hele|gehele/i] },
   // Werkverdeling
   { q: 'Wie doet de levering van de auto?', all: [/klantenservice/i] },
