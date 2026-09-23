@@ -30,12 +30,14 @@ Portaal voor nieuwe salesmedewerkers bij Justlease, in de huisstijl van justleas
 
 ## Onbeantwoorde vragen
 
-Vragen waarop de assistent het antwoord niet wist worden vastgelegd (in Redis, en altijd ook in de Vercel-logs). Bekijk ze op `/beheer.html` met de beheercode. Voeg het antwoord toe aan de kennisbank en verwijder de vraag daarna.
+Vragen waarop de assistent het antwoord niet wist worden vastgelegd in Supabase (en altijd ook in de Vercel-logs). Bekijk ze op `/beheer.html` met de beheercode. Voeg het antwoord toe aan de kennisbank en verwijder de vraag daarna.
 
-Instellen (door de eigenaar, in het Vercel-dashboard):
-1. Storage, database aanmaken (Upstash Redis) en koppelen aan dit project. Dit zet automatisch `KV_REST_API_URL` en `KV_REST_API_TOKEN`.
-2. Environment variable `ADMIN_TOKEN` toevoegen met een eigen lange, willekeurige code.
+Instellen (door de eigenaar):
+1. Supabase-project aanmaken, kies een Europese regio. Voer [`supabase/schema.sql`](supabase/schema.sql) uit in de SQL Editor.
+2. In Vercel, Environment Variables: `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY` (geheim, alleen op de server) en `ADMIN_TOKEN` (eigen lange, willekeurige code).
 3. Opnieuw deployen.
+
+De opslag zit in `lib/log.js`, zodat hij later eenvoudig te vervangen is.
 
 ## Testset chatbot
 
