@@ -172,10 +172,64 @@ const formEl = document.getElementById('chat-form');
 const inputEl = document.getElementById('question-input');
 const sendButton = document.getElementById('send-button');
 
+// Eenvoudige, veilige opmaak (vet, cursief, lijsten, alinea's) voor antwoorden van de assistent
+function appendInline(parent, text) {
+  const re = /(\*\*[^*]+\*\*|\*[^*\s][^*]*\*)/g;
+  let last = 0;
+  let m;
+  while ((m = re.exec(text))) {
+    if (m.index > last) parent.append(text.slice(last, m.index));
+    const token = m[0];
+    const node = document.createElement(token.startsWith('**') ? 'strong' : 'em');
+    node.textContent = token.startsWith('**') ? token.slice(2, -2) : token.slice(1, -1);
+    parent.appendChild(node);
+    last = m.index + token.length;
+  }
+  if (last < text.length) parent.append(text.slice(last));
+}
+
+function renderMarkdown(container, text) {
+  let list = null;
+  let listType = null;
+  let para = null;
+  for (const raw of text.split(/\r?\n/)) {
+    const line = raw.replace(/\s+$/, '');
+    if (!line.trim()) {
+      list = null;
+      para = null;
+      continue;
+    }
+    const bullet = line.match(/^\s*[*-]\s+(.*)$/);
+    const numbered = line.match(/^\s*\d+[.)]\s+(.*)$/);
+    if (bullet || numbered) {
+      const type = bullet ? 'ul' : 'ol';
+      if (!list || listType !== type) {
+        list = document.createElement(type);
+        listType = type;
+        container.appendChild(list);
+      }
+      para = null;
+      const li = document.createElement('li');
+      appendInline(li, (bullet || numbered)[1]);
+      list.appendChild(li);
+      continue;
+    }
+    list = null;
+    if (!para) {
+      para = document.createElement('p');
+      container.appendChild(para);
+    } else {
+      para.appendChild(document.createElement('br'));
+    }
+    appendInline(para, line.trim());
+  }
+}
+
 function addMessage(text, role, sources) {
   const el = document.createElement('div');
   el.className = `message ${role}`;
-  el.textContent = text;
+  if (role === 'assistant') renderMarkdown(el, text);
+  else el.textContent = text;
   if (sources && sources.length) {
     const box = document.createElement('div');
     box.className = 'message-sources';

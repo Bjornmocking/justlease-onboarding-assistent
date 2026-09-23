@@ -160,6 +160,25 @@ a {
 .message.assistant {
   align-self: flex-start;
   background: var(--panel);
+  white-space: normal;
+}
+
+.message.assistant p {
+  margin: 0 0 8px;
+}
+
+.message.assistant ul,
+.message.assistant ol {
+  margin: 0 0 8px;
+  padding-left: 22px;
+}
+
+.message.assistant li {
+  margin-bottom: 4px;
+}
+
+.message.assistant > :last-child:not(.message-sources) {
+  margin-bottom: 0;
 }
 
 .message.error {

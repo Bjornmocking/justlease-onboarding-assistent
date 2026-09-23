@@ -2,53 +2,42 @@
 
 > Bron: https://website-justlease-nl-api.justlease.nl/uploads/2025/10/Justlease_Aanleveren-documenten.pdf
 > Versiedatum: november 2025
-> Automatisch geconverteerd vanuit PDF op justlease.nl/voorwaarden. Controleer bij twijfel het brondocument voor de actuele/juridisch geldende tekst.
+> Handmatig omgezet naar een leesbare lijst; de inhoud volgt het pdf-document "Justlease financiële toetsing, versie 11.2025". Controleer bij twijfel het brondocument.
 
-WELKE DOCUMENTEN MOET JE                                                                                      INDIEN VAN TOEPASSING
-AANLEVEREN BIJ EEN AANVRAAG                                                                                   DUO STUDIESCHULD:
+## Welke documenten moet een klant aanleveren bij een aanvraag?
 
-We helpen je graag op weg!
+Welke documenten een klant moet aanleveren is afhankelijk van zijn inkomstenbron(nen). Een aantal documenten moet in elke situatie worden aangeleverd. Andere documenten zijn afhankelijk van de situatie.
 
-Welke documenten je dient aan te leveren is afhankelijk van jouw inkomstenbron(nen).
-Een aantal documenten dienen in elke situatie te worden aangeleverd en sommigen zijn
-situatie afhankelijk. Hieronder zie je welke documenten voor jou relevant zijn.
+## Documenten die Justlease in elk geval nodig heeft
 
-DIT ZIJN DE DOCUMENTEN DIE WIJ
-IN ELK GEVAL NODIG HEBBEN:
+1. Een kopie van een geldig rijbewijs, voor- en achterkant. Het moet een Europees rijbewijs zijn.
+2. Een kopie van het meest recente bankafschrift met de bijschrijving van het salaris. Niet ouder dan twee maanden.
+3. Een kopie van het meest recente bankafschrift met de afschrijving van de woonlasten. Dit geldt ook als de partner deze kosten volledig draagt.
 
-       Een kopie van                    Een kopie van het meest           Een kopie van het meest             Een kopie van het overzicht
-   een geldig rijbewijs                 recente bankafschrift met         recente bankafschrift met              met jouw huidige DUO
-  (voor- en achterkant)                                                    afschrijving woonlasten              studieschuld/aflossing
-                                           bijschrijving salaris
-(Dient een Europees rijbewijs te zijn)                                       (Ook indien partner deze kosten          (Te vinden op `mijn.duo.nl')
-                                           (Niet ouder dan twee maanden)                volledig draagt)
+## Alleen indien van toepassing: DUO-studieschuld
 
-DOCUMENTEN PER INKOMSTENBRON:
+- Een kopie van het overzicht met de huidige DUO-studieschuld of aflossing. Te vinden op mijn.duo.nl.
 
- LOONDIENST                                LOONDIENST                                                         UITKERING:
-VAST CONTRACT:                          TIJDELIJK CONTRACT:
+## Documenten per inkomstenbron
 
-     Een kopie van                           Een kopie van                      Een actuele                        Een kopie van
-  het meest recente                       het meest recente                    werkgevers                       het meest recente
-                                                                                                              uitkeringsspecificatie
-       loonstrook                              loonstrook                        verklaring
-                                                                                                              (Niet ouder dan twee maanden)
-(Niet ouder dan twee maanden)           (Niet ouder dan twee maanden)     (Niet ouder dan drie maanden)
+Naast de documenten hierboven, afhankelijk van de inkomstenbron:
 
-AOW/PENSIOEN:                                                                                ZZP'ER:
+### Loondienst met een vast contract
+- Een kopie van de meest recente loonstrook. Niet ouder dan twee maanden.
 
-                                                                          Let op! Jouw onderneming dient langer dan 12 maanden te bestaan.
+### Loondienst met een tijdelijk contract
+- Een kopie van de meest recente loonstrook. Niet ouder dan twee maanden.
+- Een actuele werkgeversverklaring. Niet ouder dan drie maanden.
 
-                                                                          Eenmanszaak/                          Besloten
-                                                                          VOF/Maatschap                       Vennootschap
+### Uitkering
+- Een kopie van de meest recente uitkeringsspecificatie. Niet ouder dan twee maanden.
 
-Een kopie van                           Een kopie van                        Een kopie van het                     Een kopie van
-het meest recente OF het actuele uniforme                                 meest recente aangifte                het meest recente
-pensioen- en AOW-                       pensioenoverzicht
-                                                                            inkomstenbelasting                       loonstrook
-specificatie
-                                                                          (Met vermelding van fiscale winst)  (Niet ouder dan twee maanden)
+### AOW of pensioen
+- Een kopie van de meest recente pensioen- en AOW-specificatie, OF een kopie van het actuele uniforme pensioenoverzicht (UPO).
 
-justlease.nl Justlease financi-le toetsing - versie 11.2025
+### Zzp'er
+Let op: de onderneming van de klant moet langer dan 12 maanden bestaan.
+- Eenmanszaak, VOF of maatschap: een kopie van de meest recente aangifte inkomstenbelasting, met vermelding van de fiscale winst.
+- Besloten vennootschap (bv): een kopie van de meest recente loonstrook. Niet ouder dan twee maanden.
 
 <!--pagina-->

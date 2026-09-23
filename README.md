@@ -28,6 +28,15 @@ Portaal voor nieuwe salesmedewerkers bij Justlease, in de huisstijl van justleas
 - De quiz gebruikt geen AI en heeft dus geen API-key of quotum nodig.
 - API-key uitsluitend via de environment variable `GEMINI_API_KEY`, nooit in code of Git.
 
+## Onbeantwoorde vragen
+
+Vragen waarop de assistent het antwoord niet wist worden vastgelegd (in Redis, en altijd ook in de Vercel-logs). Bekijk ze op `/beheer.html` met de beheercode. Voeg het antwoord toe aan de kennisbank en verwijder de vraag daarna.
+
+Instellen (door de eigenaar, in het Vercel-dashboard):
+1. Storage, database aanmaken (Upstash Redis) en koppelen aan dit project. Dit zet automatisch `KV_REST_API_URL` en `KV_REST_API_TOKEN`.
+2. Environment variable `ADMIN_TOKEN` toevoegen met een eigen lange, willekeurige code.
+3. Opnieuw deployen.
+
 ## Testset chatbot
 
 `node test/chat-testset.js` stuurt veelgestelde vragen naar de live chatbot en controleert de antwoorden (verbruikt Gemini-quotum). Voeg eigen vragen toe in `test/chat-testset.js`.

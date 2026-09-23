@@ -1,5 +1,6 @@
 const { retrieve, getWerkwijze, overlapsWerkwijze, hasContent } = require('../lib/retrieval');
 const { callGemini } = require('../lib/gemini');
+const { logUnanswered } = require('../lib/log');
 
 const ESCALATE =
   'Dit weet ik niet zeker. Leg deze vraag voor aan een senior of manager voordat je de klant iets toezegt.';
@@ -79,6 +80,7 @@ module.exports = async (req, res) => {
 
   const { context, sources: passageSources } = retrieve(question);
   if (passageSources.length === 0 && !overlapsWerkwijze(question)) {
+    await logUnanswered({ question, reason: 'geen-bron' });
     res.status(200).json({ answer: NO_ANSWER, sources: [] });
     return;
   }
@@ -111,7 +113,11 @@ module.exports = async (req, res) => {
       data?.candidates?.[0]?.content?.parts?.map((p) => p.text).join('') ||
       'Ik kon geen antwoord genereren op basis van de brondocumentatie.';
 
-    res.status(200).json(extractSources(raw, passageSources, werkwijze));
+    const result = extractSources(raw, passageSources, werkwijze);
+    if (/weet ik niet zeker/i.test(result.answer)) {
+      await logUnanswered({ question, reason: 'twijfel', answer: result.answer });
+    }
+    res.status(200).json(result);
   } catch (err) {
     console.error('Chat handler error:', err);
     res.status(500).json({ error: 'Er ging iets mis bij het verwerken van je vraag.' });
