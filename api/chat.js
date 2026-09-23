@@ -1,6 +1,6 @@
 const { loadAllContent, isContentEmpty } = require('../lib/content');
+const { callGemini } = require('../lib/gemini');
 
-const MODEL = 'gemini-2.0-flash';
 
 function buildSystemInstruction(sourceContent) {
   return [
@@ -47,12 +47,7 @@ module.exports = async (req, res) => {
   }
 
   try {
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${apiKey}`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
+    const response = await callGemini(apiKey, {
           systemInstruction: {
             parts: [{ text: buildSystemInstruction(sourceContent) }],
           },
@@ -62,9 +57,7 @@ module.exports = async (req, res) => {
               parts: [{ text: question }],
             },
           ],
-        }),
-      }
-    );
+        });
 
     if (!response.ok) {
       const errorBody = await response.text();

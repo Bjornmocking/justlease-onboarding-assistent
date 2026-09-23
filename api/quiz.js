@@ -1,29 +1,6 @@
 const { loadAllContent, isContentEmpty, getTopics, loadTopicContent } = require('../lib/content');
+const { callGemini } = require('../lib/gemini');
 
-const MODEL = 'gemini-2.0-flash';
-
-const QUIZ_SCHEMA = {
-  type: 'object',
-  properties: {
-    questions: {
-      type: 'array',
-      items: {
-        type: 'object',
-        properties: {
-          question: { type: 'string' },
-          options: {
-            type: 'array',
-            items: { type: 'string' },
-          },
-          correctIndex: { type: 'integer' },
-          explanation: { type: 'string' },
-        },
-        required: ['question', 'options', 'correctIndex', 'explanation'],
-      },
-    },
-  },
-  required: ['questions'],
-};
 
 function buildSystemInstruction(sourceContent) {
   return [
@@ -33,6 +10,7 @@ function buildSystemInstruction(sourceContent) {
     'Baseer vragen en antwoorden uitsluitend op de brondocumentatie. Verzin geen feiten.',
     'Geef bij elke vraag een korte uitleg (1-2 zinnen) waarom het antwoord correct is.',
     'Schrijf in het Nederlands, kort en praktisch.',
+    'Antwoord uitsluitend met JSON in exact dit formaat: {"questions":[{"question":string,"options":[string,string,string,string],"correctIndex":0-3,"explanation":string}]}',
     '',
     '--- BRONDOCUMENTATIE ---',
     sourceContent,
@@ -81,12 +59,7 @@ module.exports = async (req, res) => {
   }
 
   try {
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${apiKey}`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
+    const response = await callGemini(apiKey, {
           systemInstruction: {
             parts: [{ text: buildSystemInstruction(sourceContent) }],
           },
@@ -100,13 +73,7 @@ module.exports = async (req, res) => {
               ],
             },
           ],
-          generationConfig: {
-            responseMimeType: 'application/json',
-            responseSchema: QUIZ_SCHEMA,
-          },
-        }),
-      }
-    );
+        });
 
     if (!response.ok) {
       const errorBody = await response.text();
@@ -120,7 +87,7 @@ module.exports = async (req, res) => {
 
     let quiz;
     try {
-      quiz = JSON.parse(text);
+      quiz = JSON.parse(text.replace(/^\s*```(?:json)?\s*|\s*```\s*$/g, '').trim());
     } catch (err) {
       console.error('Failed to parse quiz JSON:', text);
       res.status(502).json({ error: 'Kon de gegenereerde toets niet verwerken.' });
