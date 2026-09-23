@@ -56,9 +56,90 @@ DOCUMENTS.forEach((doc) => {
   docListEl.appendChild(li);
 });
 
+// Over Justlease
+const STATS = [
+  { value: '2011', label: 'Justlease.nl opgericht' },
+  { value: '1 dec 2022', label: 'Onderdeel van Arval BNP Paribas' },
+  { value: '± 20.000', label: 'tevreden klanten op de weg' },
+  { value: '± 120', label: 'medewerkers bij Justlease' },
+  { value: '8+', label: 'gemiddelde klantbeoordeling' },
+  { value: '45+ jaar', label: 'lease-ervaring' },
+];
+
+const TIMELINE = [
+  { year: '1869', text: 'Johannes Bernardus Terberg start een smederij in het Utrechtse dorp Benschop, later aangevuld met een benzinepomp en rijwielhandel.' },
+  { year: '1965', text: 'De eerste dealervestiging van Terberg in Utrecht opent. Er volgen meer vestigingen voor personenwagens.' },
+  { year: '2011', text: 'Door de komst van het internet wordt Justlease.nl opgericht. Klanten kunnen zelf online een leasecontract afsluiten en beheren.' },
+  { year: '2012', text: 'Justlease introduceert Private Lease voor particulieren, als eerste in Nederland.' },
+  { year: '2019', text: 'Terberg Leasing en Business Lease Nederland fuseren tot Terberg Business Lease Group, met Justlease als label.' },
+  { year: '2022', text: 'Arval tekent op 8 september de overname van Terberg Business Lease Group en rondt die af op 1 december. Justlease is sindsdien onderdeel van Arval, en daarmee van BNP Paribas. Arval had in Nederland daarna meer dan 100.000 geleasede voertuigen.' },
+];
+
+const OFFER = [
+  'Auto en contract op maat: de klant kiest zelf welke opties hij wil',
+  'Haal- en brengservice bij onderhoud',
+  'Een vast maandbedrag dat niet verandert tijdens de looptijd',
+  'Kilometerbundel die één keer per kwartaal kosteloos aan te passen is',
+  '14 dagen bedenktijd',
+  'Contractannuleringsoptie bij ontslag',
+  'Het grootste Private Lease aanbod van Nederland, met Keurmerk Private Lease',
+];
+
+const ABOUT_SOURCES = [
+  ['justlease.nl/over-justlease', 'https://justlease.nl/over-justlease'],
+  ['Justlease bij Arval', 'https://justlease.nl/private-lease-bij-justlease'],
+  ['Persbericht overname (Arval)', 'https://www.arval.com/arval-announces-closing-of-transaction-to-acquire-terberg-business-lease-group'],
+];
+
+const statGrid = document.getElementById('stat-grid');
+STATS.forEach((stat) => {
+  const card = document.createElement('div');
+  card.className = 'stat';
+  const value = document.createElement('div');
+  value.className = 'stat-value';
+  value.textContent = stat.value;
+  const label = document.createElement('div');
+  label.className = 'stat-label';
+  label.textContent = stat.label;
+  card.append(value, label);
+  statGrid.appendChild(card);
+});
+
+const timelineEl = document.getElementById('timeline');
+TIMELINE.forEach((item) => {
+  const li = document.createElement('li');
+  const year = document.createElement('div');
+  year.className = 'timeline-year';
+  year.textContent = item.year;
+  const text = document.createElement('div');
+  text.textContent = item.text;
+  li.append(year, text);
+  timelineEl.appendChild(li);
+});
+
+const offerEl = document.getElementById('offer-list');
+OFFER.forEach((text) => {
+  const li = document.createElement('li');
+  li.textContent = text;
+  offerEl.appendChild(li);
+});
+
+const aboutSources = document.getElementById('about-sources');
+aboutSources.append('Bronnen: ');
+ABOUT_SOURCES.forEach(([label, url], i) => {
+  if (i > 0) aboutSources.append(', ');
+  const a = document.createElement('a');
+  a.href = url;
+  a.target = '_blank';
+  a.rel = 'noopener';
+  a.textContent = label;
+  aboutSources.appendChild(a);
+});
+
 // Navigation
 const navItems = document.querySelectorAll('.nav-item');
 const panels = {
+  about: document.getElementById('panel-about'),
   info: document.getElementById('panel-info'),
   quiz: document.getElementById('panel-quiz'),
 };
@@ -74,7 +155,7 @@ function showTab(tab) {
 navItems.forEach((btn) => btn.addEventListener('click', () => showTab(btn.dataset.tab)));
 document.querySelector('[data-tab-link]').addEventListener('click', (e) => {
   e.preventDefault();
-  showTab('info');
+  showTab('about');
 });
 
 // Chat

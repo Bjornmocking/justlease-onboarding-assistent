@@ -16,18 +16,39 @@
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <a class="logo" href="#informatie" data-tab-link="info">
+      <a class="logo" href="#over-justlease" data-tab-link="about">
         <img src="assets/logo.png" alt="Justlease Private Lease" />
       </a>
       <nav class="main-nav" aria-label="Hoofdmenu">
-        <button type="button" class="nav-item active" data-tab="info">Informatie</button>
+        <button type="button" class="nav-item active" data-tab="about">Over Justlease</button>
+        <button type="button" class="nav-item" data-tab="info">Informatie</button>
         <button type="button" class="nav-item" data-tab="quiz">Kennisquiz</button>
       </nav>
     </div>
   </header>
 
   <main class="page">
-    <section class="tab-panel" id="panel-info">
+    <section class="tab-panel" id="panel-about">
+      <h1>Over Justlease<span class="dot">.</span></h1>
+      <p class="lead">
+        Wie zijn we, waar komen we vandaan en waar staan we nu? Handig om te weten
+        voordat je de eerste klant spreekt.
+      </p>
+      <div class="stat-grid" id="stat-grid"></div>
+      <div class="about-grid">
+        <div>
+          <h2>Ons verhaal</h2>
+          <ul class="timeline" id="timeline"></ul>
+        </div>
+        <div>
+          <h2>Wat we klanten bieden</h2>
+          <ul class="doc-list" id="offer-list"></ul>
+          <p class="doc-more" id="about-sources"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="tab-panel hidden" id="panel-info">
       <h1>Alles wat je moet weten<span class="dot">.</span></h1>
       <p class="lead">
         Zoek de informatie die je nodig hebt om klanten goed te woord te staan. Stel
