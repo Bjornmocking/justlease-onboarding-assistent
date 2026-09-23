@@ -1,4 +1,5 @@
-const { loadAllContent, isContentEmpty, getTopics, loadTopicContent } = require('../lib/content');
+const { getTopics } = require('../lib/content');
+const { sample, hasContent } = require('../lib/retrieval');
 const { callGemini } = require('../lib/gemini');
 
 
@@ -38,10 +39,10 @@ module.exports = async (req, res) => {
   const { topic, count } = req.body || {};
   const questionCount = Math.min(Math.max(parseInt(count, 10) || 5, 3), 10);
 
-  const sourceContent =
-    topic && topic !== 'all' ? loadTopicContent(topic) : loadAllContent();
+  const validTopic = getTopics().some((t) => t.id === topic) ? topic : 'all';
+  const sourceContent = hasContent() ? sample(validTopic) : '';
 
-  if (!sourceContent || isContentEmpty(sourceContent)) {
+  if (!sourceContent) {
     res.status(200).json({
       questions: [],
       notice:

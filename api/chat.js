@@ -1,11 +1,11 @@
-const { loadAllContent, isContentEmpty } = require('../lib/content');
+const { retrieve, hasContent } = require('../lib/retrieval');
 const { callGemini } = require('../lib/gemini');
 
 
 function buildSystemInstruction(sourceContent) {
   return [
     'Je bent een onboarding-assistent voor nieuwe salesmedewerkers bij Justlease.',
-    'Je beantwoordt vragen over het verkoopdraaiboek en de Justlease-voorwaarden uitsluitend op basis van de brondocumentatie hieronder.',
+    'Je beantwoordt vragen over het verkoopdraaiboek en de Justlease-voorwaarden uitsluitend op basis van de passages uit de brondocumentatie hieronder (een selectie die bij de vraag past).',
     'Antwoord kort en praktisch, gericht op iemand die net begint.',
     'Als het antwoord niet in de brondocumentatie staat, geef dat expliciet aan in plaats van iets te verzinnen.',
     'Verwijs waar relevant naar het onderliggende document (bijvoorbeeld "zie de Aanvullende Voorwaarden Justlease").',
@@ -28,9 +28,7 @@ module.exports = async (req, res) => {
     return;
   }
 
-  const sourceContent = loadAllContent();
-
-  if (isContentEmpty(sourceContent)) {
+  if (!hasContent()) {
     res.status(200).json({
       answer:
         'Er is nog geen brondocumentatie ingeladen. Zodra het Justlease-verkoopdraaiboek is toegevoegd aan de data-map, kan ik hier vragen over beantwoorden.',
@@ -49,7 +47,9 @@ module.exports = async (req, res) => {
   try {
     const response = await callGemini(apiKey, {
           systemInstruction: {
-            parts: [{ text: buildSystemInstruction(sourceContent) }],
+            parts: [{ text: buildSystemInstruction(
+              retrieve(question) || '(Geen relevante passages gevonden in de brondocumentatie.)'
+            ) }],
           },
           contents: [
             {

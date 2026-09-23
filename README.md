@@ -21,11 +21,13 @@ Elk `.md`-bestand ergens onder `data/` wordt gebruikt. Zolang die map
 
 ## Functionaliteit
 
-- **Chatbot** (`api/chat.js`): beantwoordt vragen op basis van alle
-  brondocumenten, geeft aan wanneer iets niet in de bron staat.
+- **Chatbot** (`api/chat.js`): zoekt per vraag de best passende passages uit de
+  brondocumenten (`lib/retrieval.js`, BM25) en stuurt alleen die mee naar Gemini.
+  Zo blijft het verbruik laag (~10 KB per vraag i.p.v. de hele kennisbank).
+  Geeft aan wanneer iets niet in de bron staat.
 - **Kennistoets** (`api/quiz.js`): genereert een meerkeuzetoets (3-10 vragen)
-  over alle onderwerpen of één specifiek document, met directe feedback en
-  uitleg per vraag.
+  over alle onderwerpen of één specifiek document (op een willekeurige selectie
+  passages, dus elke toets is anders), met directe feedback en uitleg per vraag.
 
 ## Techniek
 
