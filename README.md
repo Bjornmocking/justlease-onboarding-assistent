@@ -1,43 +1,29 @@
-# Justlease Sales Onboarding
+# Justlease Medewerkersportaal
 
-AI-onboarding-portal voor nieuwe salesmedewerkers bij Justlease: een chatbot om
-vragen te stellen over het verkoopdraaiboek en de voorwaarden, en een
-kennistoets om jezelf te testen — zodat je zo min mogelijk collega's hoeft
-lastig te vallen om door te kunnen werken.
+Portaal voor nieuwe salesmedewerkers bij Justlease, in de huisstijl van justlease.nl
+(wit, navy `#0938A1`, oranje `#FF8B1F`, Oswald + Roboto Condensed). Twee onderdelen:
 
-## Eigen inhoud toevoegen
+- **Informatie**: overzicht van de belangrijkste documenten en een chatbot die vragen
+  beantwoordt op basis van die documenten.
+- **Kennisquiz**: één eindtoets met vaste vragen, zoals klanten ze aan de telefoon stellen.
 
-- [`data/onboarding-content.md`](data/onboarding-content.md) — algemene inleiding.
-  Voeg hier interne verkoopscripts, objection-handling of FAQ's toe.
-- [`data/bronnen/`](data/bronnen) — de officiële Justlease-documenten
-  (voorwaarden, verzekeringen, innameprotocol, etc.), overgenomen van
-  [justlease.nl/voorwaarden](https://justlease.nl/voorwaarden). Voeg hier
-  gerust `.md`-bestanden toe voor extra documenten; ze worden automatisch
-  meegenomen als context voor zowel de chatbot als de kennistoets, en
-  verschijnen als apart onderwerp in de toets.
+## Inhoud aanpassen
 
-Elk `.md`-bestand ergens onder `data/` wordt gebruikt. Zolang die map
-(bijna) leeg is, laat de assistent weten dat er nog geen documentatie is.
-
-## Functionaliteit
-
-- **Chatbot** (`api/chat.js`): zoekt per vraag de best passende passages uit de
-  brondocumenten (`lib/retrieval.js`, BM25) en stuurt alleen die mee naar Gemini.
-  Zo blijft het verbruik laag (~10 KB per vraag i.p.v. de hele kennisbank).
-  Geeft aan wanneer iets niet in de bron staat.
-- **Kennistoets** (`api/quiz.js`): genereert een meerkeuzetoets (3-10 vragen)
-  over alle onderwerpen of één specifiek document (op een willekeurige selectie
-  passages, dus elke toets is anders), met directe feedback en uitleg per vraag.
+- **Documenten voor de chatbot**: `.md`-bestanden onder [`data/`](data), met de officiële
+  documenten in [`data/bronnen/`](data/bronnen). Elk bestand wordt automatisch meegenomen.
+  De documentenlijst op de pagina staat bovenaan [`script.js`](script.js).
+- **Eindtoets**: de vragen staan bovenaan [`quiz.js`](quiz.js). Bij elke vraag is de eerste
+  optie het juiste antwoord (de volgorde wordt bij het tonen gehusseld). Geslaagd bij 80%.
+  Oefentoetsen kunnen later als extra lijst met vragen worden toegevoegd.
 
 ## Techniek
 
-- Statische frontend: `index.html`, `styles.css`, `script.js`, `quiz.js` —
-  donker thema in Justlease-huisstijl (navy `#0938A1`, oranje `#FF8B1F`,
-  lettertypes Oswald + Roboto Condensed)
-- Serverless functions (Vercel, Node.js) die de Gemini API aanroepen, met
-  `lib/content.js` als gedeelde module om alle brondocumenten te laden
-- API-key wordt uitsluitend via de environment variable `GEMINI_API_KEY`
-  aangeleverd, nooit in code of Git
+- Statische frontend: `index.html`, `styles.css`, `script.js`, `quiz.js`, `assets/logo.png`
+- Serverless function `api/chat.js` (Vercel, Node.js). `lib/retrieval.js` zoekt per vraag de
+  best passende passages (BM25) en `lib/gemini.js` roept de Gemini API aan, met herpogingen
+  en reservemodellen.
+- De quiz gebruikt geen AI en heeft dus geen API-key of quotum nodig.
+- API-key uitsluitend via de environment variable `GEMINI_API_KEY`, nooit in code of Git.
 
 ## Lokaal draaien
 
@@ -46,13 +32,9 @@ npm install -g vercel
 vercel dev
 ```
 
-Maak lokaal een `.env` bestand (gebaseerd op `.env.example`) met je eigen
-`GEMINI_API_KEY`. Dit bestand wordt genegeerd door Git.
+Maak lokaal een `.env` (zie `.env.example`) met `GEMINI_API_KEY`. Wordt genegeerd door Git.
 
 ## Deployen
 
-1. Push deze repo naar GitHub.
-2. Importeer het project in Vercel (of gebruik de al gekoppelde Git-integratie).
-3. Zet in de Vercel projectinstellingen de environment variable
-   `GEMINI_API_KEY` met je Gemini API-key.
-4. Deploy.
+Push naar GitHub of run `vercel --prod`. Zet in Vercel (Settings, Environment Variables)
+`GEMINI_API_KEY` en deploy daarna opnieuw.
