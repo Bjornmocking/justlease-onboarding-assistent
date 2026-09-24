@@ -55,7 +55,7 @@
     const listEl = document.getElementById('admin-list');
     let token = '';
 
-    const REASONS = { 'geen-bron': 'Niets gevonden in de documenten', twijfel: 'Assistent twijfelde' };
+    const REASONS = { 'geen-bron': 'Niets gevonden in de documenten', twijfel: 'Assistent twijfelde', onjuist: 'Gemeld als onjuist antwoord' };
 
     function normalize(q) {
       return q.toLowerCase().replace(/[^a-z0-9à-ÿ ]+/g, '').replace(/\s+/g, ' ').trim();

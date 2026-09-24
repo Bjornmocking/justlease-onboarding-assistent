@@ -7,6 +7,9 @@ const ESCALATE =
 
 const NO_ANSWER = `Hier heb ik geen betrouwbare informatie over in de documenten, dus ik ga niet gokken. ${ESCALATE}`;
 
+const MAX_HISTORY = 6;
+const MAX_TEXT = 1500;
+
 function buildSystemInstruction(passages, werkwijze) {
   return [
     'Je bent de onboarding-assistent voor nieuwe salesmedewerkers bij Justlease. Je helpt collega\'s, niet klanten. Antwoord kort en praktisch, in het Nederlands.',
@@ -15,7 +18,9 @@ function buildSystemInstruction(passages, werkwijze) {
     '- Gebruik uitsluitend de passages en de werkwijze hieronder. Verzin niets en gebruik geen algemene kennis over leasen.',
     '- Als de passages het antwoord niet bevatten, zeg dat eerlijk en verwijs naar een senior of manager.',
     '- Als bronnen elkaar tegenspreken, gaan de Aanvullende Voorwaarden Justlease (januari 2026) altijd voor. De Algemene Voorwaarden Keurmerk Private Lease zijn alleen het algemene kader. Geef het antwoord uit de Aanvullende Voorwaarden en vermeld kort dat het Keurmerk-document iets anders of algemener zegt, zodat de medewerker weet welke bron leidend is.',
+    '- Websitepagina\'s (verkoopargumenten) zijn geen voorwaarden. Bij tegenspraak met de Aanvullende Voorwaarden gaan de voorwaarden voor. Noem het verschil kort.',
     '- De werkwijze [W] bepaalt of een onderwerp bij sales, klantenservice of de financiële afdeling hoort. Noem dat expliciet als de vraag daarover gaat.',
+    '- Vervolgvragen ("en bij een tijdelijk contract?") beantwoord je in de context van het eerdere gesprek.',
     '',
     'GRENZEN',
     '- Tarieven en bedragen die in de passages staan mag je noemen.',
@@ -57,17 +62,33 @@ function extractSources(rawAnswer, passageSources, werkwijze) {
   return { answer, sources: unique };
 }
 
-module.exports = async (req, res) => {
+function cleanHistory(history) {
+  if (!Array.isArray(history)) return [];
+  return history
+    .filter((m) => m && (m.role === 'user' || m.role === 'assistant') && typeof m.text === 'string' && m.text.trim())
+    .slice(-MAX_HISTORY)
+    .map((m) => ({ role: m.role, text: m.text.slice(0, MAX_TEXT) }));
+}
+
+// Een korte vervolgvraag zoekt mee op de vorige vraag van de gebruiker.
+function buildRetrievalQuery(question, history) {
+  const previousUser = [...history].reverse().find((m) => m.role === 'user');
+  const isFollowUp = previousUser && question.trim().split(/\s+/).length <= 7;
+  return isFollowUp ? `${previousUser.text} ${question}` : question;
+}
+
+async function handler(req, res) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' });
     return;
   }
 
-  const { question } = req.body || {};
-  if (!question || typeof question !== 'string' || !question.trim()) {
-    res.status(400).json({ error: 'Vraag ontbreekt.' });
+  const { question, history: rawHistory } = req.body || {};
+  if (!question || typeof question !== 'string' || !question.trim() || question.length > 1000) {
+    res.status(400).json({ error: 'Vraag ontbreekt of is te lang.' });
     return;
   }
+  const history = cleanHistory(rawHistory);
 
   if (!hasContent()) {
     res.status(200).json({
@@ -78,8 +99,9 @@ module.exports = async (req, res) => {
     return;
   }
 
-  const { context, sources: passageSources } = retrieve(question);
-  if (passageSources.length === 0 && !overlapsWerkwijze(question)) {
+  const retrievalQuery = buildRetrievalQuery(question, history);
+  const { context, sources: passageSources } = retrieve(retrievalQuery);
+  if (passageSources.length === 0 && !overlapsWerkwijze(retrievalQuery)) {
     await logUnanswered({ question, reason: 'geen-bron' });
     res.status(200).json({ answer: NO_ANSWER, sources: [] });
     return;
@@ -94,11 +116,15 @@ module.exports = async (req, res) => {
   }
 
   const werkwijze = getWerkwijze();
+  const contents = [
+    ...history.map((m) => ({ role: m.role === 'assistant' ? 'model' : 'user', parts: [{ text: m.text }] })),
+    { role: 'user', parts: [{ text: question }] },
+  ];
 
   try {
     const response = await callGemini(apiKey, {
       systemInstruction: { parts: [{ text: buildSystemInstruction(context, werkwijze) }] },
-      contents: [{ role: 'user', parts: [{ text: question }] }],
+      contents,
     });
 
     if (!response.ok) {
@@ -122,4 +148,8 @@ module.exports = async (req, res) => {
     console.error('Chat handler error:', err);
     res.status(500).json({ error: 'Er ging iets mis bij het verwerken van je vraag.' });
   }
-};
+}
+
+module.exports = handler;
+module.exports.buildRetrievalQuery = buildRetrievalQuery;
+module.exports.cleanHistory = cleanHistory;
