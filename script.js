@@ -70,9 +70,9 @@ const STATS = [
 ];
 
 const TIMELINE = [
-  { year: '1869', text: 'Johannes Bernardus Terberg start een smederij in het Utrechtse dorp Benschop, later aangevuld met een benzinepomp en rijwielhandel.' },
-  { year: '1965', text: 'De eerste dealervestiging van Terberg in Utrecht opent. Er volgen meer vestigingen voor personenwagens.' },
-  { year: '2011', text: 'Door de komst van het internet wordt Justlease.nl opgericht. Klanten kunnen zelf online een leasecontract afsluiten en beheren.' },
+  { year: '1869', text: 'Johannes Bernardus Terberg start een smederij in het Utrechtse dorp Benschop, later aangevuld met een benzinepomp en rijwielhandel.', image: 'assets/over/1869.jpg', alt: 'De smederij van Terberg in Benschop, met een paard en wagen ervoor' },
+  { year: '1965', text: 'De eerste dealervestiging van Terberg in Utrecht opent. Er volgen meer vestigingen voor personenwagens.', image: 'assets/over/1965.jpg', alt: 'Een dealervestiging in 1965, met een bus in de showroom en een fietser ervoor' },
+  { year: '2011', text: 'Door de komst van het internet wordt Justlease.nl opgericht. Klanten kunnen zelf online een leasecontract afsluiten en beheren.', image: 'assets/over/2011.jpg', alt: 'Handen op een laptop met de eerste versie van Justlease.nl op het scherm' },
   { year: '2012', text: 'Justlease introduceert Private Lease voor particulieren, als eerste in Nederland.' },
   { year: '2019', text: 'Terberg Leasing en Business Lease Nederland fuseren tot Terberg Business Lease Group, met Justlease als label.' },
   { year: '2022', text: 'Arval tekent op 8 september de overname van Terberg Business Lease Group en rondt die af op 1 december. Justlease is sindsdien onderdeel van Arval, en daarmee van BNP Paribas. Arval had in Nederland daarna meer dan 100.000 geleasede voertuigen.' },
@@ -84,7 +84,7 @@ const OFFER = [
   'Een vast maandbedrag dat niet verandert tijdens de looptijd',
   'Kilometerbundel die één keer per kwartaal kosteloos aan te passen is',
   '14 dagen bedenktijd',
-  'Contractannuleringsoptie bij ontslag',
+  'Ontslag annuleringsoptie bij het servicepakket Zorgeloos',
   'Het grootste Private Lease aanbod van Nederland, met Keurmerk Private Lease',
 ];
 
@@ -124,7 +124,17 @@ STATS.forEach((stat) => {
 const timelineEl = document.getElementById('timeline');
 TIMELINE.forEach((item) => {
   const li = el('li');
-  li.append(el('div', 'timeline-year', item.year), el('div', null, item.text));
+  const body = el('div', 'timeline-body');
+  body.append(el('div', 'timeline-year', item.year), el('div', null, item.text));
+  li.appendChild(body);
+  if (item.image) {
+    const img = el('img', 'timeline-img');
+    img.src = item.image;
+    img.alt = item.alt || '';
+    img.loading = 'lazy';
+    li.classList.add('has-image');
+    li.appendChild(img);
+  }
   timelineEl.appendChild(li);
 });
 

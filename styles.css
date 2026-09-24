@@ -963,3 +963,117 @@ a {
     font-size: 0.8rem;
   }
 }
+
+/* Aanpassingen na feedback */
+
+.sub-heading {
+  margin: 28px 0 10px;
+  font-size: 1.15rem;
+}
+
+.badge {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 2px 8px;
+  background: var(--orange);
+  color: #1c1c1c;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  vertical-align: middle;
+}
+
+.compare.packages td,
+.compare.packages thead th:not(:first-child) {
+  text-align: center;
+}
+
+.compare.packages tbody th {
+  width: 34%;
+}
+
+/* Quiz: eigen keuzerondjes, zodat ze na het nakijken zwart zijn */
+
+.quiz-option input {
+  appearance: none;
+  -webkit-appearance: none;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 4px;
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+}
+
+.quiz-option input:checked {
+  background: radial-gradient(circle, var(--blue) 0 42%, #fff 46%);
+}
+
+.quiz-container.graded .quiz-option {
+  cursor: default;
+}
+
+.quiz-container.graded .quiz-option input {
+  border-color: #000;
+  opacity: 1;
+  cursor: default;
+}
+
+.quiz-container.graded .quiz-option input:checked {
+  background: radial-gradient(circle, #000 0 42%, #fff 46%);
+}
+
+/* Over Justlease */
+
+.about-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.about-hero .lead {
+  margin-bottom: 0;
+}
+
+.about-hero-img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.timeline li.has-image {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.timeline-img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+}
+
+.check-list.two-cols {
+  columns: 2;
+  column-gap: 32px;
+}
+
+.check-list.two-cols li {
+  break-inside: avoid;
+}
+
+@media (max-width: 860px) {
+  .about-hero,
+  .timeline li.has-image {
+    grid-template-columns: 1fr;
+  }
+
+  .check-list.two-cols {
+    columns: 1;
+  }
+}

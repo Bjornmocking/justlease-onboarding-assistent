@@ -1,7 +1,6 @@
 # Verkoopargumenten: auto kopen of leasen
 
 > Bron: https://justlease.nl/ontdek-private-lease-kopen-of-leasen
-> Versiedatum: 24 september 2026 (samenvatting van de website, opgehaald op die datum)
 
 Samenvatting van hoe Justlease kopen en private leasen naast elkaar zet. Handig als een klant twijfelt of leasen bij hem past. Kernzin: kopen is "ik wil een auto bezitten", leasen is "ik wil een auto gebruiken".
 

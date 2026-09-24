@@ -7,7 +7,7 @@ Portaal voor nieuwe salesmedewerkers bij Justlease, in de huisstijl van justleas
   beantwoordt op basis van die documenten. De chatbot onthoudt het gesprek (vervolgvragen werken),
   toont bron, versiedatum en pagina, en heeft knoppen om te kopiëren of een fout antwoord te melden.
 - **Verkoopdraaiboek**: wie wat doet in het klantproces, gespreksargumenten (samengevat van justlease.nl) en wat je wel en niet zegt.
-- **Kennisquiz**: één eindtoets (23 vragen, voortgang en laatste score per computer), zoals klanten ze aan de telefoon stellen.
+- **Kennisquiz**: één eindtoets (23 vragen, voortgang en laatste score per computer; geslaagd bij maximaal 3 fouten), zoals klanten ze aan de telefoon stellen.
 - **Over Justlease**: geschiedenis, kerncijfers en wat we klanten bieden (gegevens bovenaan `script.js`).
 
 ## Inhoud aanpassen

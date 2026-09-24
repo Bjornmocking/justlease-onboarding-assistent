@@ -1,7 +1,7 @@
 # Over Justlease: geschiedenis en kerncijfers
 
-> Versiedatum: 23 september 2026 (opgehaald van justlease.nl)
-> Bronnen: justlease.nl/over-justlease, justlease.nl/private-lease-bij-justlease en het persbericht van Arval over de overname van Terberg Business Lease Group (arval.com, december 2022).
+> Bron: https://justlease.nl/over-justlease
+> Meer bronnen: justlease.nl/private-lease-bij-justlease en het persbericht van Arval over de overname van Terberg Business Lease Group (arval.com, december 2022).
 
 ## Wie is Justlease
 Justlease is het Private Lease label binnen Arval BNP Paribas Group. Justlease is een handelsnaam van Arval B.V. Het verhaal van Justlease begon in 2012 met de ambitie om autolease bereikbaar te maken voor particulieren. Private Lease werd bij Justlease geboren en Justlease was hiermee als eerste in Nederland. Justlease is grondlegger van Private Lease in Nederland en heeft het grootste Private Lease aanbod van Nederland. Justlease is aangesloten bij het Keurmerk Private Lease.

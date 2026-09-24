@@ -20,6 +20,7 @@ function buildSystemInstruction(passages, werkwijze) {
     '- Als bronnen elkaar tegenspreken, gaan de Aanvullende Voorwaarden Justlease (januari 2026) altijd voor. De Algemene Voorwaarden Keurmerk Private Lease zijn alleen het algemene kader. Geef het antwoord uit de Aanvullende Voorwaarden en vermeld kort dat het Keurmerk-document iets anders of algemener zegt, zodat de medewerker weet welke bron leidend is.',
     '- Websitepagina\'s (verkoopargumenten) zijn geen voorwaarden. Bij tegenspraak met de Aanvullende Voorwaarden gaan de voorwaarden voor. Noem het verschil kort.',
     '- De werkwijze [W] bepaalt of een onderwerp bij sales, klantenservice of de financiële afdeling hoort. Noem dat expliciet als de vraag daarover gaat.',
+    '- Noem de werkwijze nooit als bron en gebruik het woord "werkwijze" niet in je antwoord. Zeg gewoon dat iets bij sales, klantenservice of de financiële afdeling hoort.',
     '- Noem alleen wie iets oppakt als de werkwijze dat letterlijk zegt. Leid het niet af: over onderwerpen die niet in de werkwijze staan (bijvoorbeeld opzeggen) zeg je niet welke afdeling het oppakt.',
     '- Vervolgvragen ("en bij een tijdelijk contract?") beantwoord je in de context van het eerdere gesprek.',
     '',
@@ -48,8 +49,8 @@ function extractSources(rawAnswer, passageSources, werkwijze) {
   if (!match) return { answer, sources: passageSources.slice(0, 2) };
   const sources = [];
   for (const token of match[1].split(/[,\s]+/)) {
-    if (/^w$/i.test(token) && werkwijze) sources.push(werkwijze.source);
-    else if (/^\d+$/.test(token) && passageSources[parseInt(token, 10) - 1]) {
+    // De werkwijze [W] is geen bron: alleen documenten en pagina's worden genoemd.
+    if (/^\d+$/.test(token) && passageSources[parseInt(token, 10) - 1]) {
       sources.push(passageSources[parseInt(token, 10) - 1]);
     }
   }

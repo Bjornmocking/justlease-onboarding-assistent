@@ -1,4 +1,4 @@
-const PASS_PERCENTAGE = 80;
+const MAX_MISTAKES = 3;
 
 // Elke vraag: eerste optie in `options` is het juiste antwoord; de volgorde wordt bij het tonen gehusseld.
 const QUESTIONS = [
@@ -44,17 +44,17 @@ const QUESTIONS = [
   {
     question: 'Wat zijn de extra\'s van het Comfort Pakket ten opzichte van het Standaard Pakket?',
     options: [
-      'Een lagere eigen bijdrage bij schade: 325 euro in plaats van 475 euro',
+      'Een eigen risico van 325 euro in plaats van 475 euro',
       'Een auto uit een hoger segment',
       'Onbeperkt kilometers',
       'Gratis winterbanden',
     ],
-    explanation: 'Het Comfort Pakket verlaagt de eigen bijdrage bij schade van 475 naar 325 euro (bij 3 of meer schades in een jaar: 650 in plaats van 950 euro). Bij het Zorgeloos Pakket is dat 175 euro.',
-    source: 'Aanvullende voorwaarden Justlease',
+    explanation: 'Het Comfort Pakket heeft een eigen risico van 325 euro in plaats van 475 euro. Het vervangend vervoer is al na 24 uur op kosten van Justlease (bij Standaard na 48 uur) en de schadeverzekering inzittenden is inbegrepen. Bij het Zorgeloos Pakket is het eigen risico 175 euro.',
+    source: 'justlease.nl/verzekeringen',
   },
   {
     question: 'Een klant heeft schade aan de auto. Binnen hoeveel uur moet hij contact opnemen met Justlease?',
-    options: ['Binnen 48 uur', 'Binnen 7 dagen', 'Binnen 14 dagen', 'Pas bij het inleveren van de auto'],
+    options: ['Binnen 48 uur', 'Binnen 24 uur', 'Binnen 72 uur', 'Binnen 12 uur'],
     explanation: 'De klant neemt binnen 48 uur na de schade contact op en stuurt binnen 48 uur een Europees schadeformulier in.',
     source: 'Aanvullende voorwaarden Justlease',
   },
@@ -74,12 +74,6 @@ const QUESTIONS = [
     ],
     explanation: 'Bij voortijdige beëindiging geldt een vaste opzeggingsvergoeding van 50% van de resterende termijnbedragen, met een opzegtermijn van één maand. Een verzoek gaat naar klantenservice@justlease.nl.',
     source: 'Aanvullende voorwaarden Justlease',
-  },
-  {
-    question: 'Hoe hoog mag een waarborgsom maximaal zijn?',
-    options: ['3 maal het termijnbedrag', '1 maal het termijnbedrag', '12 maal het termijnbedrag', 'Er is geen maximum'],
-    explanation: 'Een waarborgsom is niet hoger dan 3 maal het termijnbedrag en staat vermeld in het leasecontract.',
-    source: 'Algemene voorwaarden Keurmerk Private Lease',
   },
   {
     question: 'Waar moet een klant onderhoud en reparatie van de auto laten uitvoeren?',
@@ -110,8 +104,8 @@ const QUESTIONS = [
     source: 'Aanvullende voorwaarden Justlease',
   },
   {
-    question: 'Op wiens naam staat het voertuig?',
-    options: ['Arval B.V. (Justlease is een handelsnaam van Arval)', 'De klant', 'De dealer', 'De verzekeraar Greenval'],
+    question: 'Op wie zijn naam staat het voertuig?',
+    options: ['Arval B.V.', 'De klant', 'De dealer', 'De verzekeraar Greenval'],
     explanation: 'Het voertuig staat op naam van Arval B.V. Justlease is een handelsnaam van Arval B.V.',
     source: 'Aanvullende voorwaarden Justlease',
   },
@@ -119,13 +113,16 @@ const QUESTIONS = [
     question: 'Een klant vraagt wanneer en hoe zijn nieuwe auto wordt geleverd. Wie pakt dit op?',
     options: ['Klantenservice', 'Sales', 'De financiële afdeling', 'De klant regelt dit zelf met de dealer'],
     explanation: 'Alles tot en met het afronden van de aanvraag is sales. De levering van de auto hoort bij klantenservice.',
-    source: 'Werkwijze Justlease Sales (intern)',
+  },
+  {
+    question: 'Een klant met een rijdende auto heeft een vraag over zijn lopende contract. Wie pakt dit op?',
+    options: ['Klantenservice', 'Sales', 'De financiële afdeling', 'Dit hangt af van de looptijd van het contract'],
+    explanation: 'Alle vragen over een rijdend contract horen bij klantenservice. Gaat het om een verlenging of om twijfel over een nieuwe auto, doorrijden of inleveren, dan is het een salesgesprek.',
   },
   {
     question: 'De auto van een klant rijdt al, maar hij wil zijn contract verlengen. Wie pakt dit op?',
     options: ['Sales', 'Klantenservice', 'De financiële afdeling', 'Niemand, verlengen kan alleen bij het einde van het contract'],
     explanation: 'Verlengingen vallen onder sales, ook als de auto al rijdt. Twijfelt de klant bij een aflopend contract over een nieuwe auto, doorrijden of inleveren, dan is dat ook een salesgesprek. Kiest hij voor inleveren, dan is het klantenservice.',
-    source: 'Werkwijze Justlease Sales (intern)',
   },
   {
     question: 'Een klant heeft in één kalenderjaar 3 of meer niet-verhaalbare schades gehad. Wat gebeurt er met zijn eigen bijdrage?',
@@ -139,10 +136,10 @@ const QUESTIONS = [
     source: 'Aanvullende voorwaarden Justlease',
   },
   {
-    question: 'De auto van een klant staat in de garage voor onderhoud. Wie betaalt de eerste 48 uur vervangend vervoer, als de klant niet de optie "direct vervangend vervoer" heeft?',
-    options: ['De klant', 'Justlease', 'De garage', 'De verzekeraar'],
-    explanation: 'Bij onderhoud en reparatie zijn de kosten van vervangend vervoer voor de eerste 48 uur voor rekening van de klant. Heeft hij de optie "direct vervangend vervoer" gekozen, dan zijn die 48 uur inbegrepen. Let op: op de website staan andere termijnen; de voorwaarden zijn leidend.',
-    source: 'Aanvullende voorwaarden Justlease',
+    question: 'Vanaf wanneer is vervangend vervoer op kosten van Justlease bij het Comfort Pakket?',
+    options: ['Na 24 uur', 'Na 48 uur', 'Direct', 'Na 72 uur'],
+    explanation: 'Bij het Comfort Pakket is vervangend vervoer na 24 uur op kosten van Justlease. Bij het Standaard Pakket is dat na 48 uur en bij het Zorgeloos Pakket direct.',
+    source: 'justlease.nl/verzekeringen',
   },
   {
     question: 'Een klant vraagt of een leasecontract een BKR-registratie geeft. Wat is het juiste antwoord?',
@@ -153,7 +150,7 @@ const QUESTIONS = [
       'Ja, maar hij verdwijnt zodra de auto is ingeleverd',
     ],
     explanation: 'Een leasecontract geeft een BKR-registratie, ook bij Justlease. Die kan invloed hebben op een hypotheekaanvraag. De registratie blijft 5 jaar na het einde van het contract zichtbaar, met een einddatum erbij.',
-    source: 'justlease.nl, voor- en nadelen (opgehaald 24 september 2026)',
+    source: 'justlease.nl, voor- en nadelen',
   },
   {
     question: 'Een klant vraagt of private lease een lening is. Wat zeg je?',
@@ -164,24 +161,24 @@ const QUESTIONS = [
       'Dat hangt af van de looptijd',
     ],
     explanation: 'Private lease is geen lening. Justlease blijft altijd eigenaar van de leaseauto. Er is wel een BKR-registratie.',
-    source: 'justlease.nl, voor- en nadelen (opgehaald 24 september 2026)',
+    source: 'justlease.nl, voor- en nadelen',
   },
   {
     question: 'Hoe vaak kan een klant zijn kilometerbundel kosteloos aanpassen?',
     options: ['Eén keer per kwartaal', 'Eén keer per jaar', 'Zo vaak als hij wil', 'Alleen aan het einde van het contract'],
     explanation: 'Blijkt dat de klant meer of minder rijdt, dan kan hij het aantal kilometers één keer per kwartaal kosteloos aanpassen.',
-    source: 'justlease.nl, private lease bij Justlease (opgehaald 23 september 2026)',
+    source: 'justlease.nl, private lease bij Justlease',
   },
   {
-    question: 'Wat kan een klant doen als hij zijn baan verliest tijdens het contract?',
+    question: 'Bij welk servicepakket is de ontslag annuleringsoptie inbegrepen?',
     options: [
-      'Gebruikmaken van de contractannuleringsoptie',
-      'Niets, het contract loopt gewoon door',
-      'De auto direct terugbrengen zonder gevolgen',
-      'Het contract laten overnemen door Justlease',
+      'Alleen bij het Zorgeloos Pakket',
+      'Bij alle pakketten',
+      'Bij het Standaard en het Comfort Pakket',
+      'Alleen bij het Comfort Pakket',
     ],
-    explanation: 'Justlease biedt een contractannuleringsoptie: bij ontslag kan de klant van de auto af.',
-    source: 'justlease.nl, voor- en nadelen (opgehaald 24 september 2026)',
+    explanation: 'De ontslag annuleringsoptie zit alleen bij het Zorgeloos Pakket. Onder bepaalde voorwaarden kan de klant dan het leasecontract ontbinden: er zijn minimaal 12 maanden van de leaseperiode verstreken en de arbeidsovereenkomst voor onbepaalde tijd van de hoofdcontractant is beëindigd.',
+    source: 'justlease.nl/verzekeringen',
   },
   {
     question: 'Een klant twijfelt tussen een nieuwe auto en een occasion en wil zo snel mogelijk rijden. Wat past het beste?',
@@ -192,7 +189,7 @@ const QUESTIONS = [
       'Een occasion: die wordt binnen een week geleverd',
     ],
     explanation: 'Een occasion heeft een levertijd van ongeveer 6 weken en een scherper tarief dan nieuw. Een nieuwe auto past bij wie een gloednieuwe auto wil, kan wachten en een lang contract prima vindt.',
-    source: 'justlease.nl, nieuw of occasion (opgehaald 24 september 2026)',
+    source: 'justlease.nl, nieuw of occasion',
   },
   {
     question: 'Een klant vraagt of hij 5 euro korting krijgt omdat hij drie keer pech had. Wat doe je?',
@@ -203,7 +200,6 @@ const QUESTIONS = [
       'De klant doorverwijzen naar klantenservice',
     ],
     explanation: 'Je beslist nooit zelf over korting of tegemoetkoming. Dat beslist een senior. Zeg ook niets toe wat niet zwart op wit in de voorwaarden staat.',
-    source: 'Werkwijze Justlease Sales (intern)',
   },
 ];
 
@@ -293,7 +289,22 @@ function renderQuiz() {
   submit.addEventListener('click', gradeQuiz);
   actions.appendChild(submit);
   quizContainer.appendChild(actions);
+  quizContainer.classList.remove('graded');
   quizContainer.onchange = updateProgress;
+  // Klik je een al gekozen antwoord opnieuw aan, dan wordt de keuze weer gewist.
+  quizContainer.onmousedown = (event) => {
+    const option = event.target.closest('.quiz-option');
+    const input = option && option.querySelector('input');
+    if (input) input.dataset.wasChecked = input.checked ? 'true' : 'false';
+  };
+  quizContainer.onclick = (event) => {
+    const input = event.target.closest('.quiz-option') && event.target.closest('.quiz-option').querySelector('input');
+    if (input && !input.disabled && input.dataset.wasChecked === 'true') {
+      input.checked = false;
+      input.dataset.wasChecked = 'false';
+      updateProgress();
+    }
+  };
   updateProgress();
 }
 
@@ -330,19 +341,21 @@ function gradeQuiz() {
 
     const explanation = document.createElement('div');
     explanation.className = 'quiz-explanation';
-    explanation.textContent = `${q.explanation} (Bron: ${q.source})`;
+    explanation.textContent = q.source ? `${q.explanation} (Bron: ${q.source})` : q.explanation;
     block.appendChild(explanation);
   });
 
   const percentage = Math.round((correctCount / currentQuiz.length) * 100);
-  const passed = percentage >= PASS_PERCENTAGE;
+  const mistakes = currentQuiz.length - correctCount;
+  const passed = mistakes <= MAX_MISTAKES;
+  quizContainer.classList.add('graded');
 
   const result = document.createElement('div');
   result.className = 'quiz-result';
   const heading = document.createElement('h2');
   heading.textContent = passed ? 'Geslaagd' : 'Nog niet geslaagd';
   const detail = document.createElement('div');
-  detail.textContent = `Je hebt ${correctCount} van de ${currentQuiz.length} vragen goed (${percentage}%). Je bent geslaagd bij ${PASS_PERCENTAGE}% of hoger.`;
+  detail.textContent = `Je hebt ${correctCount} van de ${currentQuiz.length} vragen goed (${mistakes} ${mistakes === 1 ? 'fout' : 'fouten'}). Je bent geslaagd als je maximaal ${MAX_MISTAKES} fouten maakt.`;
   result.append(heading, detail);
   quizContainer.prepend(result);
   progressEl.textContent = '';
