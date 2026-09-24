@@ -127,10 +127,122 @@ const QUESTIONS = [
     explanation: 'Verlengingen vallen onder sales, ook als de auto al rijdt. Twijfelt de klant bij een aflopend contract over een nieuwe auto, doorrijden of inleveren, dan is dat ook een salesgesprek. Kiest hij voor inleveren, dan is het klantenservice.',
     source: 'Werkwijze Justlease Sales (intern)',
   },
+  {
+    question: 'Een klant heeft in één kalenderjaar 3 of meer niet-verhaalbare schades gehad. Wat gebeurt er met zijn eigen bijdrage?',
+    options: [
+      'Die wordt hoger: 950 euro bij het Standaard Pakket, voor het resterende deel van de leaseperiode',
+      'Die blijft hetzelfde',
+      'De klant hoeft dan niets meer te betalen',
+      'Het contract wordt direct beëindigd',
+    ],
+    explanation: 'Bij 3 of meer niet-verhaalbare schades in één kalenderjaar geldt een hogere eigen bijdrage voor het resterende deel van de leaseperiode: 950 euro bij het Standaard Pakket, 650 bij Comfort en 350 bij Zorgeloos.',
+    source: 'Aanvullende voorwaarden Justlease',
+  },
+  {
+    question: 'De auto van een klant staat in de garage voor onderhoud. Wie betaalt de eerste 48 uur vervangend vervoer, als de klant niet de optie "direct vervangend vervoer" heeft?',
+    options: ['De klant', 'Justlease', 'De garage', 'De verzekeraar'],
+    explanation: 'Bij onderhoud en reparatie zijn de kosten van vervangend vervoer voor de eerste 48 uur voor rekening van de klant. Heeft hij de optie "direct vervangend vervoer" gekozen, dan zijn die 48 uur inbegrepen. Let op: op de website staan andere termijnen; de voorwaarden zijn leidend.',
+    source: 'Aanvullende voorwaarden Justlease',
+  },
+  {
+    question: 'Een klant vraagt of een leasecontract een BKR-registratie geeft. Wat is het juiste antwoord?',
+    options: [
+      'Ja, ook bij Justlease. De registratie blijft 5 jaar na het einde van het contract zichtbaar',
+      'Nee, private lease is geen lening en wordt niet geregistreerd',
+      'Alleen als de klant een betalingsachterstand heeft',
+      'Ja, maar hij verdwijnt zodra de auto is ingeleverd',
+    ],
+    explanation: 'Een leasecontract geeft een BKR-registratie, ook bij Justlease. Die kan invloed hebben op een hypotheekaanvraag. De registratie blijft 5 jaar na het einde van het contract zichtbaar, met een einddatum erbij.',
+    source: 'justlease.nl, voor- en nadelen (opgehaald 24 september 2026)',
+  },
+  {
+    question: 'Een klant vraagt of private lease een lening is. Wat zeg je?',
+    options: [
+      'Nee, Justlease blijft eigenaar van de auto',
+      'Ja, de klant leent het bedrag van de auto',
+      'Ja, en de klant wordt na afloop eigenaar',
+      'Dat hangt af van de looptijd',
+    ],
+    explanation: 'Private lease is geen lening. Justlease blijft altijd eigenaar van de leaseauto. Er is wel een BKR-registratie.',
+    source: 'justlease.nl, voor- en nadelen (opgehaald 24 september 2026)',
+  },
+  {
+    question: 'Hoe vaak kan een klant zijn kilometerbundel kosteloos aanpassen?',
+    options: ['Eén keer per kwartaal', 'Eén keer per jaar', 'Zo vaak als hij wil', 'Alleen aan het einde van het contract'],
+    explanation: 'Blijkt dat de klant meer of minder rijdt, dan kan hij het aantal kilometers één keer per kwartaal kosteloos aanpassen.',
+    source: 'justlease.nl, private lease bij Justlease (opgehaald 23 september 2026)',
+  },
+  {
+    question: 'Wat kan een klant doen als hij zijn baan verliest tijdens het contract?',
+    options: [
+      'Gebruikmaken van de contractannuleringsoptie',
+      'Niets, het contract loopt gewoon door',
+      'De auto direct terugbrengen zonder gevolgen',
+      'Het contract laten overnemen door Justlease',
+    ],
+    explanation: 'Justlease biedt een contractannuleringsoptie: bij ontslag kan de klant van de auto af.',
+    source: 'justlease.nl, voor- en nadelen (opgehaald 24 september 2026)',
+  },
+  {
+    question: 'Een klant twijfelt tussen een nieuwe auto en een occasion en wil zo snel mogelijk rijden. Wat past het beste?',
+    options: [
+      'Een occasion: levertijd ongeveer 6 weken en een scherper tarief',
+      'Een nieuwe auto: die is altijd sneller geleverd',
+      'Het maakt niet uit, de levertijd is gelijk',
+      'Een occasion: die wordt binnen een week geleverd',
+    ],
+    explanation: 'Een occasion heeft een levertijd van ongeveer 6 weken en een scherper tarief dan nieuw. Een nieuwe auto past bij wie een gloednieuwe auto wil, kan wachten en een lang contract prima vindt.',
+    source: 'justlease.nl, nieuw of occasion (opgehaald 24 september 2026)',
+  },
+  {
+    question: 'Een klant vraagt of hij 5 euro korting krijgt omdat hij drie keer pech had. Wat doe je?',
+    options: [
+      'Voorleggen aan een senior, die beslist over korting',
+      'Zelf 5 euro korting toezeggen',
+      'Zeggen dat dit nooit kan',
+      'De klant doorverwijzen naar klantenservice',
+    ],
+    explanation: 'Je beslist nooit zelf over korting of tegemoetkoming. Dat beslist een senior. Zeg ook niets toe wat niet zwart op wit in de voorwaarden staat.',
+    source: 'Werkwijze Justlease Sales (intern)',
+  },
 ];
 
 const quizContainer = document.getElementById('quiz-container');
+const progressEl = document.getElementById('quiz-progress');
+const lastEl = document.getElementById('quiz-last');
+const STORAGE_KEY = 'justlease-quiz-laatste';
 let currentQuiz = [];
+
+function answeredCount() {
+  return currentQuiz.filter((_, i) => quizContainer.querySelector(`input[name="question-${i}"]:checked`)).length;
+}
+
+function updateProgress() {
+  progressEl.textContent = `Beantwoord: ${answeredCount()} van ${currentQuiz.length}`;
+}
+
+function showLastResult() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) {
+      lastEl.hidden = true;
+      return;
+    }
+    const r = JSON.parse(raw);
+    lastEl.textContent = `Laatste poging op deze computer: ${r.correct} van ${r.total} goed (${r.percentage}%), ${r.passed ? 'geslaagd' : 'nog niet geslaagd'}, op ${r.date}.`;
+    lastEl.hidden = false;
+  } catch (err) {
+    lastEl.hidden = true;
+  }
+}
+
+function saveResult(result) {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(result));
+  } catch (err) {
+    // Opslaan is een extraatje; zonder opslag werkt de quiz gewoon.
+  }
+}
 
 function shuffle(array) {
   const copy = array.slice();
@@ -181,6 +293,8 @@ function renderQuiz() {
   submit.addEventListener('click', gradeQuiz);
   actions.appendChild(submit);
   quizContainer.appendChild(actions);
+  quizContainer.onchange = updateProgress;
+  updateProgress();
 }
 
 function gradeQuiz() {
@@ -195,6 +309,9 @@ function gradeQuiz() {
       quizContainer.querySelector('.quiz-actions').appendChild(warning);
     }
     warning.textContent = `Je hebt nog ${unanswered} ${unanswered === 1 ? 'vraag' : 'vragen'} niet beantwoord.`;
+    const firstOpen = currentQuiz.findIndex((_, i) => !quizContainer.querySelector(`input[name="question-${i}"]:checked`));
+    const block = quizContainer.querySelector(`.quiz-question[data-index="${firstOpen}"]`);
+    if (block) block.scrollIntoView({ behavior: 'smooth', block: 'center' });
     return;
   }
 
@@ -228,6 +345,15 @@ function gradeQuiz() {
   detail.textContent = `Je hebt ${correctCount} van de ${currentQuiz.length} vragen goed (${percentage}%). Je bent geslaagd bij ${PASS_PERCENTAGE}% of hoger.`;
   result.append(heading, detail);
   quizContainer.prepend(result);
+  progressEl.textContent = '';
+  saveResult({
+    correct: correctCount,
+    total: currentQuiz.length,
+    percentage,
+    passed,
+    date: new Date().toLocaleDateString('nl-NL'),
+  });
+  showLastResult();
 
   const actions = quizContainer.querySelector('.quiz-actions');
   actions.innerHTML = '';
@@ -243,4 +369,5 @@ function gradeQuiz() {
   window.scrollTo(0, 0);
 }
 
+showLastResult();
 renderQuiz();

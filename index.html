@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Justlease Medewerkersportaal</title>
+  <meta name="description" content="Interne kennisbank, verkoopdraaiboek en kennisquiz voor nieuwe salesmedewerkers van Justlease." />
   <link rel="icon" href="assets/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,40 +15,23 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Ga naar de inhoud</a>
+
   <header class="site-header">
     <div class="header-inner">
       <a class="logo" href="#informatie" data-tab-link="info">
-        <img src="assets/logo.png" alt="Justlease Private Lease" />
+        <img src="assets/logo.png" alt="Justlease Private Lease, naar de startpagina" />
       </a>
       <nav class="main-nav" aria-label="Hoofdmenu">
         <button type="button" class="nav-item active" data-tab="info">Informatie</button>
+        <button type="button" class="nav-item" data-tab="playbook">Verkoopdraaiboek</button>
         <button type="button" class="nav-item" data-tab="quiz">Kennisquiz</button>
         <button type="button" class="nav-item" data-tab="about">Over Justlease</button>
       </nav>
     </div>
   </header>
 
-  <main class="page">
-    <section class="tab-panel hidden" id="panel-about">
-      <h1>Over Justlease<span class="dot">.</span></h1>
-      <p class="lead">
-        Wie zijn we, waar komen we vandaan en waar staan we nu? Handig om te weten
-        voordat je de eerste klant spreekt.
-      </p>
-      <div class="stat-grid" id="stat-grid"></div>
-      <div class="about-grid">
-        <div>
-          <h2>Ons verhaal</h2>
-          <ul class="timeline" id="timeline"></ul>
-        </div>
-        <div>
-          <h2>Wat we klanten bieden</h2>
-          <ul class="doc-list" id="offer-list"></ul>
-          <p class="doc-more" id="about-sources"></p>
-        </div>
-      </div>
-    </section>
-
+  <main class="page" id="main">
     <section class="tab-panel" id="panel-info">
       <h1>Alles wat je moet weten<span class="dot">.</span></h1>
       <p class="lead">
@@ -57,20 +41,27 @@
 
       <div class="info-grid">
         <div class="info-chat">
-          <h2>Stel je vraag</h2>
-          <div class="chat" id="chat">
-            <div class="message assistant">Hoi! Stel gerust een vraag over de voorwaarden, verzekeringen, de kredietcheck of het innameprotocol. Ik zoek het antwoord voor je op in de documenten.</div>
+          <div class="section-head">
+            <h2>Stel je vraag</h2>
+            <button type="button" class="link-button" id="reset-chat" hidden>Nieuw gesprek</button>
           </div>
+          <div class="chat" id="chat" role="log" aria-live="polite" aria-label="Gesprek met de assistent">
+            <div class="message assistant">Hoi! Stel gerust een vraag over de voorwaarden, verzekeringen, de kredietcheck, het innameprotocol of het verkoopgesprek. Ik zoek het antwoord voor je op in de documenten.</div>
+          </div>
+          <div class="chips" id="chips" aria-label="Voorbeeldvragen"></div>
           <form class="input-bar" id="chat-form">
+            <label class="sr-only" for="question-input">Je vraag</label>
             <input
               type="text"
               id="question-input"
               placeholder="Bijvoorbeeld: Welke documenten moet een klant aanleveren?"
               autocomplete="off"
+              maxlength="500"
               required
             />
             <button type="submit" class="btn" id="send-button">Verstuur</button>
           </form>
+          <p class="chat-note">De assistent baseert zich alleen op de documenten hiernaast en kan zich vergissen. Bij twijfel: vraag het een senior of manager.</p>
         </div>
 
         <aside class="info-docs">
@@ -82,6 +73,7 @@
           </p>
         </aside>
       </div>
+
       <div class="routing">
         <h2>Sales of klantenservice?</h2>
         <div class="routing-grid">
@@ -113,15 +105,186 @@
       </div>
     </section>
 
+    <section class="tab-panel hidden" id="panel-playbook">
+      <h1>Verkoopdraaiboek<span class="dot">.</span></h1>
+      <p class="lead">
+        Zo voer je het gesprek met een klant: wie wat doet, welke argumenten je gebruikt en waar je
+        eerlijk over moet zijn. De argumenten zijn samengevat van de website van Justlease.
+      </p>
+
+      <h2>Wie doet wat in het klantproces?</h2>
+      <div class="phase-grid">
+        <div class="phase">
+          <h3>Fase 1: nog geen rijdende auto</h3>
+          <ul class="steps">
+            <li><span>Verkoopgesprek</span><em class="tag tag-sales">Sales</em></li>
+            <li><span>De auto uitkiezen</span><em class="tag tag-sales">Sales</em></li>
+            <li><span>De aanvraag afronden</span><em class="tag tag-sales">Sales</em></li>
+            <li><span>Financiële toetsing<small>Jij staat de klant te woord; vragen kun je voorleggen aan de financiële afdeling</small></span><em class="tag tag-fin">Financieel</em></li>
+            <li><span>Levering van de auto</span><em class="tag tag-cs">Klantenservice</em></li>
+          </ul>
+        </div>
+        <div class="phase">
+          <h3>Fase 2: rijdende auto, aflopend contract</h3>
+          <ul class="steps">
+            <li><span>Verlenging van het contract<small>Ook als de auto al rijdt</small></span><em class="tag tag-sales">Sales</em></li>
+            <li><span>Twijfel: nieuwe auto, doorrijden of inleveren?<small>Dit is een salesgesprek</small></span><em class="tag tag-sales">Sales</em></li>
+            <li><span>Kiest de klant voor inleveren<small>Vanaf dat moment</small></span><em class="tag tag-cs">Klantenservice</em></li>
+          </ul>
+        </div>
+      </div>
+      <p class="doc-desc">Bron: interne werkafspraak, versie 23 september 2026.</p>
+
+      <div class="callout">
+        <strong>Let op: de website spreekt zichzelf tegen over vervangend vervoer.</strong>
+        Op justlease.nl staan drie verschillende termijnen (binnen 24 uur, na 48 uur en binnen 72 uur). De Aanvullende
+        Voorwaarden Justlease (januari 2026) zijn leidend: bij onderhoud en reparatie zijn de eerste 48 uur voor rekening van de
+        klant, tenzij hij de optie "direct vervangend vervoer" heeft gekozen. Doe daarom geen toezegging over de termijn.
+      </div>
+
+      <h2>Argumenten in het gesprek</h2>
+      <div class="accordion">
+        <details>
+          <summary>Leasen of kopen? Zo leg je het uit</summary>
+          <div class="acc-body">
+            <p>Kopen is "ik wil een auto bezitten", leasen is "ik wil een auto gebruiken".</p>
+            <div class="table-wrap">
+              <table class="compare">
+                <thead><tr><th>Onderwerp</th><th>Kopen</th><th>Leasen bij Justlease</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Auto uitzoeken</th><td>Eindeloos zoeken, onderhandelen en langs meerdere dealers of particulieren</td><td>Nieuw samenstellen, occasion of uit de voorraad, alles vergelijken op één platform en direct de vaste prijs per maand zien</td></tr>
+                  <tr><th scope="row">Betalen</th><td>Grote uitgave in één keer en onzekerheid over extra kosten</td><td>Vast maandbedrag zonder financiële verrassingen; spaargeld blijft beschikbaar; geen slotsom aan het einde</td></tr>
+                  <tr><th scope="row">Autozaken regelen</th><td>Zelf verzekering en garage zoeken; onverwachte, hoge kosten</td><td>Verzekering, pechhulp, onderhoud en reparatie zijn geregeld; de klant maakt alleen een onderhoudsafspraak via de app</td></tr>
+                  <tr><th scope="row">Pech of schade</th><td>Zelf hulp regelen, kans op hoge kosten en een stijgende premie</td><td>Haal- en brengservice, alleen een eigen risico, pechhulp in binnen- en buitenland</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p><strong>Minder geschikt:</strong> wie een sportwagen wil rijden of heel veel kilometers maakt. <strong>Wel geschikt:</strong> woon-werkverkeer, boodschappen en uitstapjes. Een tweedehands auto leasen is vaak goedkoper dan een zelf samengestelde nieuwe auto.</p>
+            <p class="acc-source">Samenvatting van <a href="https://justlease.nl/ontdek-private-lease-kopen-of-leasen" target="_blank" rel="noopener">justlease.nl/ontdek-private-lease-kopen-of-leasen</a>, opgehaald op 24 september 2026. De autokostenvergelijker op de site is indicatief; noem de uitkomst niet als toezegging.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>De voordelen van private lease bij Justlease</summary>
+          <div class="acc-body">
+            <p>In het vaste maandbedrag zitten afschrijving, vervangend vervoer, verzekering, onderhoud, banden, reparatie en verkoop. Het basistarief verandert niet tijdens de looptijd. Bij schade geldt alleen een eigen risico, en alleen als de schade niet op een derde te verhalen is.</p>
+            <ul class="check-list">
+              <li>Geen groot aankoopbedrag nodig</li>
+              <li>Geen zorgen over reparatie en onderhoud</li>
+              <li>Volledig grip op en inzicht in de autokosten</li>
+              <li>Standaard all-risk verzekerd, met de optie om beter verzekerd te zijn</li>
+              <li>Flexibele kilometerbundel, één keer per kwartaal kosteloos aan te passen (bron: <a href="https://justlease.nl/private-lease-bij-justlease" target="_blank" rel="noopener">justlease.nl/private-lease-bij-justlease</a>)</li>
+              <li>Persoonlijke online omgeving en app</li>
+              <li>Haal- en brengservice bij onderhoud</li>
+              <li>Contractannuleringsoptie: bij ontslag kan de klant van de auto af</li>
+              <li>Aangesloten bij het Keurmerk Private Lease, onderdeel van Arval, 120 medewerkers en meer dan 45 jaar lease-ervaring</li>
+            </ul>
+            <p class="acc-source">Samenvatting van <a href="https://justlease.nl/ontdek-private-lease-voordelen" target="_blank" rel="noopener">justlease.nl/ontdek-private-lease-voordelen</a>, opgehaald op 24 september 2026.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>De nadelen: wees er eerlijk over</summary>
+          <div class="acc-body">
+            <ul class="check-list">
+              <li><strong>BKR-registratie.</strong> Een leasecontract geeft een BKR-registratie, ook bij Justlease. Dat hoeft geen negatief effect te hebben als de klant aan zijn verplichtingen voldoet, maar het kan invloed hebben op een hypotheekaanvraag. Vraag of de klant binnenkort een huis wil kopen. De registratie blijft 5 jaar na het einde van het contract zichtbaar, met een einddatum erbij.</li>
+              <li><strong>Geen lening.</strong> Private lease is geen lening: Justlease blijft eigenaar van de auto.</li>
+              <li><strong>Schadevrije jaren.</strong> Bij de meeste leasemaatschappijen bouwt de klant tijdens de leaseperiode geen schadevrije jaren op. Justlease geeft aan het einde een leaseverklaring, die de meeste verzekeraars kunnen verwerken.</li>
+              <li><strong>Langlopend contract.</strong> Bijvoorbeeld 24 tot 60 maanden. Dat geeft een lager tarief, maar is een nadeel voor wie geen lang contract wil.</li>
+            </ul>
+            <p><strong>Nog niet beantwoord:</strong> of iemand met een negatieve BKR-codering kan leasen. Dat staat niet in de bronnen. Leg die vraag voor aan de financiële afdeling of een senior.</p>
+            <p class="acc-source">Samenvatting van <a href="https://justlease.nl/ontdek-private-lease-voordelen" target="_blank" rel="noopener">justlease.nl/ontdek-private-lease-voordelen</a>, opgehaald op 24 september 2026.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Nieuw of occasion leasen?</summary>
+          <div class="acc-body">
+            <div class="two-col">
+              <div>
+                <h3>Occasion</h3>
+                <ul class="check-list">
+                  <li>Altijd een jong gebruikte auto, met strenge inspectie op schade, onderhoudshistorie en staat</li>
+                  <li>Levertijd ongeveer 6 weken</li>
+                  <li>Scherper tarief dan nieuw</li>
+                  <li>Een kortere looptijd kost een stuk minder dan bij nieuw</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Nieuw</h3>
+                <ul class="check-list">
+                  <li>Compleet nieuwe auto en weinig onderhoud</li>
+                  <li>Voordeliger bij een lange looptijd</li>
+                </ul>
+              </div>
+            </div>
+            <p><strong>Kies nieuw</strong> als de klant waarde hecht aan een gloednieuwe auto, een paar weken kan wachten en een lang contract prima vindt. <strong>Kies occasion</strong> als duurzaamheid telt, de klant snel een auto wil en het laagste tarief zoekt.</p>
+            <p><strong>Let op:</strong> een occasion lijkt soms duurder dan nieuw. Kijk dan naar de uitvoering: van elke occasion is er maar één, dus navigatie of optiepakketten kunnen verschillen. Noem geen prijzen uit je hoofd; verwijs naar de aanbodpagina.</p>
+            <p class="acc-source">Samenvatting van <a href="https://justlease.nl/nieuw-of-occasion-leasen" target="_blank" rel="noopener">justlease.nl/nieuw-of-occasion-leasen</a>, opgehaald op 24 september 2026.</p>
+          </div>
+        </details>
+      </div>
+
+      <h2>Wat zeg je wel en niet?</h2>
+      <div class="do-dont">
+        <div class="do">
+          <h3>Wel</h3>
+          <ul>
+            <li>Tarieven en bedragen noemen die op de website of in de voorwaarden staan</li>
+            <li>Eerlijk zijn over de nadelen, zoals de BKR-registratie en een langlopend contract</li>
+            <li>Bij twijfel zeggen wat je wel weet, en dat je het niet zeker weet</li>
+          </ul>
+        </div>
+        <div class="dont">
+          <h3>Niet</h3>
+          <ul>
+            <li>Zelf beslissen over korting of tegemoetkoming, bijvoorbeeld na drie keer pech. Dat beslist een senior</li>
+            <li>Een harde toezegging doen die niet zwart op wit in de voorwaarden staat</li>
+            <li>Prijzen uit je hoofd of termijnen voor vervangend vervoer noemen</li>
+          </ul>
+        </div>
+      </div>
+      <p class="doc-desc">Twijfel je? Leg het voor aan een senior of manager. Bron: interne werkafspraak, versie 23 september 2026.</p>
+    </section>
+
     <section class="tab-panel hidden" id="panel-quiz">
       <h1>Kennisquiz<span class="dot">.</span></h1>
       <p class="lead">
         De eindtoets met de vragen die klanten je vaak aan de telefoon stellen. Kies bij
         elke vraag het juiste antwoord. Je bent geslaagd bij 80% of hoger.
       </p>
+      <div id="quiz-last" class="quiz-last" hidden></div>
+      <div id="quiz-progress" class="quiz-progress" aria-live="polite"></div>
       <div id="quiz-container" class="quiz-container"></div>
     </section>
+
+    <section class="tab-panel hidden" id="panel-about">
+      <h1>Over Justlease<span class="dot">.</span></h1>
+      <p class="lead">
+        Wie zijn we, waar komen we vandaan en waar staan we nu? Handig om te weten
+        voordat je de eerste klant spreekt.
+      </p>
+      <div class="stat-grid" id="stat-grid"></div>
+      <div class="about-grid">
+        <div>
+          <h2>Ons verhaal</h2>
+          <ul class="timeline" id="timeline"></ul>
+        </div>
+        <div>
+          <h2>Wat we klanten bieden</h2>
+          <ul class="doc-list" id="offer-list"></ul>
+          <p class="doc-more" id="about-sources"></p>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>Interne kennisbank voor nieuwe medewerkers. Justlease is een handelsnaam van Arval B.V.</span>
+      <span id="last-updated"></span>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
   <script src="quiz.js"></script>

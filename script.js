@@ -1,3 +1,5 @@
+const LAST_UPDATED = '24 september 2026';
+
 const DOCUMENTS = [
   {
     title: 'Algemene voorwaarden Keurmerk Private Lease',
@@ -8,7 +10,7 @@ const DOCUMENTS = [
   {
     title: 'Aanvullende voorwaarden Justlease',
     version: 'januari 2026',
-    desc: 'Eigen bijdrage, opzegging, vervangend vervoer en schade (januari 2026).',
+    desc: 'Leidend. Eigen bijdrage, opzegging, vervangend vervoer en schade.',
     url: 'https://website-justlease-nl-api.justlease.nl/uploads/2026/01/Justlease-aanvullende-voorwaarden-versie-jan2026.docx.pdf',
   },
   {
@@ -49,22 +51,15 @@ const DOCUMENTS = [
   },
 ];
 
-const docListEl = document.getElementById('doc-list');
-DOCUMENTS.forEach((doc) => {
-  const li = document.createElement('li');
-  const a = document.createElement('a');
-  a.href = doc.url;
-  a.target = '_blank';
-  a.rel = 'noopener';
-  a.textContent = doc.title;
-  const desc = document.createElement('div');
-  desc.className = 'doc-desc';
-  desc.textContent = `${doc.desc} Versie: ${doc.version}.`;
-  li.append(a, desc);
-  docListEl.appendChild(li);
-});
+const SUGGESTIONS = [
+  'Wat moet een klant aanleveren voor de kredietcheck?',
+  'Wie doet de levering van de auto?',
+  'Wat is de eigen bijdrage bij schade?',
+  'Wat zijn de voordelen van private lease?',
+  'Nieuw of occasion leasen?',
+  'Wat gebeurt er als een contractpartner overlijdt?',
+];
 
-// Over Justlease
 const STATS = [
   { value: '2011', label: 'Justlease.nl opgericht' },
   { value: '1 dec 2022', label: 'Onderdeel van Arval BNP Paribas' },
@@ -99,65 +94,82 @@ const ABOUT_SOURCES = [
   ['Persbericht overname (Arval)', 'https://www.arval.com/arval-announces-closing-of-transaction-to-acquire-terberg-business-lease-group'],
 ];
 
+function el(tag, className, text) {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (text !== undefined) node.textContent = text;
+  return node;
+}
+
+// Documentenlijst
+const docListEl = document.getElementById('doc-list');
+DOCUMENTS.forEach((doc) => {
+  const li = el('li');
+  const a = el('a', null, doc.title);
+  a.href = doc.url;
+  a.target = '_blank';
+  a.rel = 'noopener';
+  li.append(a, el('div', 'doc-desc', `${doc.desc} Versie: ${doc.version}.`));
+  docListEl.appendChild(li);
+});
+
+// Over Justlease
 const statGrid = document.getElementById('stat-grid');
 STATS.forEach((stat) => {
-  const card = document.createElement('div');
-  card.className = 'stat';
-  const value = document.createElement('div');
-  value.className = 'stat-value';
-  value.textContent = stat.value;
-  const label = document.createElement('div');
-  label.className = 'stat-label';
-  label.textContent = stat.label;
-  card.append(value, label);
+  const card = el('div', 'stat');
+  card.append(el('div', 'stat-value', stat.value), el('div', 'stat-label', stat.label));
   statGrid.appendChild(card);
 });
 
 const timelineEl = document.getElementById('timeline');
 TIMELINE.forEach((item) => {
-  const li = document.createElement('li');
-  const year = document.createElement('div');
-  year.className = 'timeline-year';
-  year.textContent = item.year;
-  const text = document.createElement('div');
-  text.textContent = item.text;
-  li.append(year, text);
+  const li = el('li');
+  li.append(el('div', 'timeline-year', item.year), el('div', null, item.text));
   timelineEl.appendChild(li);
 });
 
 const offerEl = document.getElementById('offer-list');
-OFFER.forEach((text) => {
-  const li = document.createElement('li');
-  li.textContent = text;
-  offerEl.appendChild(li);
-});
+OFFER.forEach((text) => offerEl.appendChild(el('li', null, text)));
 
 const aboutSources = document.getElementById('about-sources');
 aboutSources.append('Bronnen: ');
 ABOUT_SOURCES.forEach(([label, url], i) => {
   if (i > 0) aboutSources.append(', ');
-  const a = document.createElement('a');
+  const a = el('a', null, label);
   a.href = url;
   a.target = '_blank';
   a.rel = 'noopener';
-  a.textContent = label;
   aboutSources.appendChild(a);
 });
 
-// Navigation
+document.getElementById('last-updated').textContent = `Laatst bijgewerkt: ${LAST_UPDATED}`;
+
+// Navigatie met vaste adressen per tabblad
+const TAB_HASHES = { info: 'informatie', playbook: 'verkoopdraaiboek', quiz: 'kennisquiz', about: 'over-justlease' };
 const navItems = document.querySelectorAll('.nav-item');
 const panels = {
-  about: document.getElementById('panel-about'),
   info: document.getElementById('panel-info'),
+  playbook: document.getElementById('panel-playbook'),
   quiz: document.getElementById('panel-quiz'),
+  about: document.getElementById('panel-about'),
 };
 
-function showTab(tab) {
-  navItems.forEach((b) => b.classList.toggle('active', b.dataset.tab === tab));
-  Object.entries(panels).forEach(([key, panel]) => {
-    panel.classList.toggle('hidden', key !== tab);
+function showTab(tab, updateHash = true) {
+  if (!panels[tab]) tab = 'info';
+  navItems.forEach((b) => {
+    const active = b.dataset.tab === tab;
+    b.classList.toggle('active', active);
+    if (active) b.setAttribute('aria-current', 'page');
+    else b.removeAttribute('aria-current');
   });
+  Object.entries(panels).forEach(([key, panel]) => panel.classList.toggle('hidden', key !== tab));
+  if (updateHash) history.replaceState(null, '', `#${TAB_HASHES[tab]}`);
   window.scrollTo(0, 0);
+}
+
+function tabFromHash() {
+  const hash = window.location.hash.replace('#', '');
+  return Object.keys(TAB_HASHES).find((k) => TAB_HASHES[k] === hash) || 'info';
 }
 
 navItems.forEach((btn) => btn.addEventListener('click', () => showTab(btn.dataset.tab)));
@@ -165,12 +177,8 @@ document.querySelector('[data-tab-link]').addEventListener('click', (e) => {
   e.preventDefault();
   showTab('info');
 });
-
-// Chat
-const chatEl = document.getElementById('chat');
-const formEl = document.getElementById('chat-form');
-const inputEl = document.getElementById('question-input');
-const sendButton = document.getElementById('send-button');
+window.addEventListener('hashchange', () => showTab(tabFromHash(), false));
+showTab(tabFromHash(), false);
 
 // Eenvoudige, veilige opmaak (vet, cursief, lijsten, alinea's) voor antwoorden van de assistent
 function appendInline(parent, text) {
@@ -225,43 +233,83 @@ function renderMarkdown(container, text) {
   }
 }
 
-function addMessage(text, role, sources) {
-  const el = document.createElement('div');
-  el.className = `message ${role}`;
-  if (role === 'assistant') renderMarkdown(el, text);
-  else el.textContent = text;
-  if (sources && sources.length) {
-    const box = document.createElement('div');
-    box.className = 'message-sources';
-    box.append('Bron: ');
-    sources.forEach((src, i) => {
-      if (i > 0) box.append('; ');
-      let label;
-      if (src.url) {
-        label = document.createElement('a');
-        label.href = src.url;
-        label.target = '_blank';
-        label.rel = 'noopener';
-      } else {
-        label = document.createElement('span');
-      }
-      label.textContent = src.title;
-      box.appendChild(label);
-      const details = [src.version && `versie: ${src.version}`, src.pages].filter(Boolean).join(', ');
-      if (details) box.append(` (${details})`);
-    });
-    el.appendChild(box);
-  }
-  chatEl.appendChild(el);
-  chatEl.scrollTop = chatEl.scrollHeight;
-  return el;
+// Chat
+const chatEl = document.getElementById('chat');
+const formEl = document.getElementById('chat-form');
+const inputEl = document.getElementById('question-input');
+const sendButton = document.getElementById('send-button');
+const chipsEl = document.getElementById('chips');
+const resetButton = document.getElementById('reset-chat');
+const conversation = [];
+
+function sourceBox(sources) {
+  const box = el('div', 'message-sources');
+  box.append('Bron: ');
+  sources.forEach((src, i) => {
+    if (i > 0) box.append('; ');
+    let label;
+    if (src.url) {
+      label = el('a', null, src.title);
+      label.href = src.url;
+      label.target = '_blank';
+      label.rel = 'noopener';
+    } else {
+      label = el('span', null, src.title);
+    }
+    box.appendChild(label);
+    const details = [src.version && `versie: ${src.version}`, src.pages].filter(Boolean).join(', ');
+    if (details) box.append(` (${details})`);
+  });
+  return box;
 }
 
-formEl.addEventListener('submit', async (event) => {
-  event.preventDefault();
-  const question = inputEl.value.trim();
-  if (!question) return;
+function answerActions(question, answer) {
+  const bar = el('div', 'message-actions');
 
+  const copy = el('button', 'link-button', 'Kopieer');
+  copy.type = 'button';
+  copy.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(answer);
+      copy.textContent = 'Gekopieerd';
+    } catch (err) {
+      copy.textContent = 'Kopiëren mislukt';
+    }
+  });
+
+  const report = el('button', 'link-button', 'Antwoord niet correct? Meld het');
+  report.type = 'button';
+  report.addEventListener('click', async () => {
+    report.disabled = true;
+    try {
+      const response = await fetch('/api/feedback', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question, answer }),
+      });
+      report.textContent = response.ok ? 'Gemeld, bedankt' : 'Melden mislukt';
+    } catch (err) {
+      report.textContent = 'Melden mislukt';
+    }
+  });
+
+  bar.append(copy, report);
+  return bar;
+}
+
+function addMessage(text, role, sources, question) {
+  const node = el('div', `message ${role}`);
+  if (role === 'assistant') renderMarkdown(node, text);
+  else node.textContent = text;
+  if (sources && sources.length) node.appendChild(sourceBox(sources));
+  if (role === 'assistant' && question) node.appendChild(answerActions(question, text));
+  chatEl.appendChild(node);
+  chatEl.scrollTop = chatEl.scrollHeight;
+  return node;
+}
+
+async function ask(question) {
+  chipsEl.hidden = true;
   addMessage(question, 'user');
   inputEl.value = '';
   inputEl.disabled = true;
@@ -273,16 +321,17 @@ formEl.addEventListener('submit', async (event) => {
     const response = await fetch('/api/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ question }),
+      body: JSON.stringify({ question, history: conversation.slice(-6) }),
     });
-
     const data = await response.json();
     pending.remove();
 
     if (!response.ok) {
       addMessage(data.error || 'Er ging iets mis.', 'error');
     } else {
-      addMessage(data.answer, 'assistant', data.sources);
+      addMessage(data.answer, 'assistant', data.sources, question);
+      conversation.push({ role: 'user', text: question }, { role: 'assistant', text: data.answer });
+      resetButton.hidden = false;
     }
   } catch (err) {
     pending.remove();
@@ -292,4 +341,25 @@ formEl.addEventListener('submit', async (event) => {
     sendButton.disabled = false;
     inputEl.focus();
   }
+}
+
+SUGGESTIONS.forEach((text) => {
+  const chip = el('button', 'chip', text);
+  chip.type = 'button';
+  chip.addEventListener('click', () => ask(text));
+  chipsEl.appendChild(chip);
+});
+
+resetButton.addEventListener('click', () => {
+  conversation.length = 0;
+  while (chatEl.children.length > 1) chatEl.removeChild(chatEl.lastChild);
+  chipsEl.hidden = false;
+  resetButton.hidden = true;
+  inputEl.focus();
+});
+
+formEl.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const question = inputEl.value.trim();
+  if (question) ask(question);
 });

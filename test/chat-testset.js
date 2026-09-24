@@ -23,6 +23,20 @@ const TESTS = [
   { q: 'Sinds wanneer is Justlease onderdeel van Arval?', all: [/2022/] },
   { q: 'Wat gebeurt er met het contract als een van de twee contractpartners overlijdt?', all: [/kosteloos/i], none: [/weet ik niet zeker|senior of manager/i] },
   { q: 'Wat betekent hoofdelijk aansprakelijk bij een medecontractant?', all: [/volledig|hele|gehele/i] },
+  // Verkoopdraaiboek
+  { q: 'Is private lease een lening?', all: [/eigenaar/i], none: [/weet ik niet zeker/i] },
+  { q: 'Krijgt een klant een BKR-registratie bij een leasecontract?', all: [/BKR/, /5 jaar|vijf jaar/i] },
+  { q: 'Wat is de levertijd van een occasion?', all: [/6 weken|zes weken/i] },
+  { q: 'Kan iemand met een negatieve BKR-codering leasen?', all: [ESCALATE], none: [/ja, dat kan|nee, dat kan niet|is niet mogelijk/i] },
+  // Vervolgvraag met gespreksgeheugen
+  {
+    q: 'En wat als hij een tijdelijk contract heeft?',
+    history: [
+      { role: 'user', text: 'Wat moet een klant aanleveren voor de kredietcheck?' },
+      { role: 'assistant', text: 'Een rijbewijs, bankafschriften en per inkomstenbron een loonstrook of specificatie.' },
+    ],
+    all: [/werkgeversverklaring/i],
+  },
   // Werkverdeling
   { q: 'Wie doet de levering van de auto?', all: [/klantenservice/i] },
   { q: 'Een klant met een rijdende auto wil zijn contract verlengen. Wie pakt dat op?', all: [/sales/i] },
@@ -35,11 +49,11 @@ const TESTS = [
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-async function ask(question) {
+async function ask(question, history) {
   const res = await fetch(`${BASE_URL}/api/chat`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ question }),
+    body: JSON.stringify({ question, history }),
   });
   const data = await res.json();
   if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
@@ -52,7 +66,7 @@ async function ask(question) {
   const failures = [];
   for (const t of TESTS) {
     try {
-      const { answer, sources } = await ask(t.q);
+      const { answer, sources } = await ask(t.q, t.history);
       const missing = (t.all || []).filter((re) => !re.test(answer));
       const forbidden = (t.none || []).filter((re) => re.test(answer));
       const ok = missing.length === 0 && forbidden.length === 0;
