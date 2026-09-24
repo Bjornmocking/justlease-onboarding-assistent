@@ -1086,3 +1086,9 @@ a {
 .numbered li {
   padding: 3px 0;
 }
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
