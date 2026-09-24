@@ -3,7 +3,9 @@
 // Standaard tegen de live site. Let op: elke vraag gebruikt Gemini-quotum.
 
 const BASE_URL = process.argv[2] || 'https://justlease-onboarding-assistent.vercel.app';
-const DELAY_MS = 4000;
+// Gebruik: node test/chat-testset.js [basis-url] [vanaf] [tot]  (vanaf/tot = indexen om in delen te draaien)
+const DELAY_MS = 12000;
+const RETRY_WAIT_MS = 60000;
 
 const ESCALATE = /senior|manager|ervaren collega/i;
 
@@ -75,13 +77,25 @@ async function ask(question, history) {
   return data;
 }
 
+async function askWithRetry(question, history) {
+  try {
+    return await ask(question, history);
+  } catch (err) {
+    await sleep(RETRY_WAIT_MS);
+    return ask(question, history);
+  }
+}
+
 (async () => {
   let passed = 0;
   let errors = 0;
   const failures = [];
-  for (const t of TESTS) {
+  const from = parseInt(process.argv[3] || '0', 10);
+  const to = parseInt(process.argv[4] || String(TESTS.length), 10);
+  const selected = TESTS.slice(from, to);
+  for (const t of selected) {
     try {
-      const { answer, sources } = await ask(t.q, t.history);
+      const { answer, sources } = await askWithRetry(t.q, t.history);
       const missing = (t.all || []).filter((re) => !re.test(answer));
       const forbidden = (t.none || []).filter((re) => re.test(answer));
       const ok = missing.length === 0 && forbidden.length === 0;
@@ -94,9 +108,9 @@ async function ask(question, history) {
     }
     await sleep(DELAY_MS);
   }
-  console.log(`\n${passed}/${TESTS.length} geslaagd, ${errors} technische fouten.`);
+  console.log(`\n${passed}/${selected.length} geslaagd, ${errors} technische fouten.`);
   failures.forEach((f) => {
     console.log(`\n--- ${f.q}\nAntwoord: ${f.answer}\nMist: ${f.missing.join(', ') || '-'} | Ongewenst: ${f.forbidden.join(', ') || '-'}`);
   });
-  process.exit(passed === TESTS.length ? 0 : 1);
+  process.exit(passed === selected.length ? 0 : 1);
 })();
