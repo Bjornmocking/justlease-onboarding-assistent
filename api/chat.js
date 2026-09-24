@@ -20,6 +20,7 @@ function buildSystemInstruction(passages, werkwijze) {
     '- Als bronnen elkaar tegenspreken, gaan de Aanvullende Voorwaarden Justlease (januari 2026) altijd voor. De Algemene Voorwaarden Keurmerk Private Lease zijn alleen het algemene kader. Geef het antwoord uit de Aanvullende Voorwaarden en vermeld kort dat het Keurmerk-document iets anders of algemener zegt, zodat de medewerker weet welke bron leidend is.',
     '- Websitepagina\'s (verkoopargumenten) zijn geen voorwaarden. Bij tegenspraak met de Aanvullende Voorwaarden gaan de voorwaarden voor. Noem het verschil kort.',
     '- De werkwijze [W] bepaalt of een onderwerp bij sales, klantenservice of de financiële afdeling hoort. Noem dat expliciet als de vraag daarover gaat.',
+    '- Noem alleen wie iets oppakt als de werkwijze dat letterlijk zegt. Leid het niet af: over onderwerpen die niet in de werkwijze staan (bijvoorbeeld opzeggen) zeg je niet welke afdeling het oppakt.',
     '- Vervolgvragen ("en bij een tijdelijk contract?") beantwoord je in de context van het eerdere gesprek.',
     '',
     'GRENZEN',

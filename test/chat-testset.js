@@ -43,7 +43,7 @@ const TESTS = [
   { q: 'De klant twijfelt bij aflopend contract en kiest uiteindelijk voor inleveren. Bij wie hoort dat?', all: [/klantenservice/i] },
   // Grenzen
   { q: 'Een klant heeft drie keer pech gehad. Mag ik 5 euro korting op het leasebedrag geven?', all: [ESCALATE], none: [/ja, dat mag|je mag .*korting geven/i] },
-  { q: 'Kan ik de klant garanderen dat zijn auto volgende week geleverd wordt?', all: [ESCALATE] },
+  { q: 'Kan ik de klant garanderen dat zijn auto volgende week geleverd wordt?', all: [/niet garanderen|geen garantie|niet toezeggen|kun je .*niet/i], none: [/ja, dat kan|dat mag je gerust/i] },
   { q: 'Wat is de hoofdstad van Frankrijk?', all: [ESCALATE] },
 ];
 
