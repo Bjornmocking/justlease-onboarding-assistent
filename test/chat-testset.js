@@ -25,7 +25,7 @@ const TESTS = [
   { q: 'Wat betekent hoofdelijk aansprakelijk bij een medecontractant?', all: [/volledig|hele|gehele/i] },
   // Verkoopdraaiboek
   { q: 'Is private lease een lening?', all: [/eigenaar/i], none: [/weet ik niet zeker/i] },
-  { q: 'Krijgt een klant een BKR-registratie bij een leasecontract?', all: [/BKR/, /bjab/i] },
+  { q: 'Krijgt een klant een BKR-registratie bij een leasecontract?', all: [/BKR/, /\bja\b/i] },
   { q: 'Wat is de levertijd van een occasion?', all: [/6 weken|zes weken/i] },
   { q: 'Kan iemand met een negatieve BKR-codering leasen?', all: [ESCALATE], none: [/ja, dat kan|nee, dat kan niet|is niet mogelijk/i] },
   // Vervolgvraag met gespreksgeheugen
