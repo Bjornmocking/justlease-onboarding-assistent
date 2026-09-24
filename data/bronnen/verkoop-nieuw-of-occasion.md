@@ -14,7 +14,7 @@ Hulp bij de keuze tussen private lease nieuw en private lease occasion.
 ## Private lease nieuw in het kort
 - Weinig onderhoud en een compleet nieuwe auto.
 - Helemaal zelf samen te stellen naar eigen wens.
-- De levering duurt altijd enkele maanden.
+- De levering duurt ongeveer 4 tot 6 maanden na het afronden van de aanvraag. Dat verschilt per merk, model en uitvoering.
 - Alle voordelen van private lease.
 
 ## Let op bij het vergelijken
@@ -22,5 +22,5 @@ Hulp bij de keuze tussen private lease nieuw en private lease occasion.
 - De prijzen op de site zijn aan verandering onderhevig. Verwijs voor actuele prijzen naar de aanbodpagina en noem geen prijzen uit je hoofd.
 
 ## Snelle keuzehulp voor het gesprek
-- Kiest de klant liever een nieuwe auto? Past bij: waarde hechten aan een gloednieuwe auto, enkele maanden kunnen wachten en een langdurig contract prima vinden.
+- Kiest de klant liever een nieuwe auto? Past bij: waarde hechten aan een gloednieuwe auto, 4 tot 6 maanden kunnen wachten en een langdurig contract prima vinden.
 - Kiest de klant liever een occasion? Past bij: duurzaamheid belangrijk vinden, de auto snel willen hebben en een zo laag mogelijk leasetarief willen.

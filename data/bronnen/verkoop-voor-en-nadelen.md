@@ -12,7 +12,7 @@ Alle kosten voor afschrijving, vervangend vervoer, verzekering, onderhoud, bande
 - Geen zorgen over reparatie en onderhoud.
 - Volledig grip op en inzicht in de autokosten.
 - Standaard all-risk verzekerd, met de optie om nog beter verzekerd te zijn.
-- Flexibele kilometerbundel: de klant bepaalt zelf de looptijd en het aantal kilometers, en kan het aantal kilometers één keer per kwartaal kosteloos aanpassen (bron: justlease.nl/private-lease-bij-justlease, opgehaald op 23 september 2026).
+- Flexibele kilometerbundel: de klant bepaalt zelf de looptijd en het aantal kilometers, en kan het aantal kilometers één keer per kwartaal kosteloos aanpassen (bron: justlease.nl/private-lease-bij-justlease). Justlease is een van de weinige leasemaatschappijen met een flexibele kilometerbundel; dat staat niet in het Keurmerk, dus hiervoor is de website de bron. Het wijzigen van de kilometerbundel loopt via klantenservice: https://lps-info.arval.com/bundelwijziging
 - Persoonlijke online omgeving en app met altijd inzicht in de kilometerbundel.
 - Haal- en brengservice bij onderhoud.
 - Contractannuleringsoptie bij ontslag: alleen bij het servicepakket Zorgeloos (zie verkoop-servicepakketten).

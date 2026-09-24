@@ -28,5 +28,5 @@ Justlease is het Private Lease label binnen Arval BNP Paribas Group. Justlease i
 - Een vast maandbedrag; het basistarief verandert niet gedurende de looptijd.
 - Flexibele kilometerbundel: het aantal kilometers kan een keer per kwartaal kosteloos worden aangepast.
 - 14 dagen bedenktijd.
-- Contractannuleringsoptie bij ontslag.
+- Ontslag annuleringsoptie: alleen bij het servicepakket Zorgeloos.
 - Pechhulp in alle landen op de groene kaart.

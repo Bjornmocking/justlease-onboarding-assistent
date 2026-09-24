@@ -40,6 +40,11 @@ const TESTS = [
     ],
     all: [/werkgeversverklaring/i],
   },
+  // Nieuwe informatie
+  { q: 'Vanaf welke leeftijd mag iemand leasen?', all: [/18/] },
+  { q: 'Wanneer heeft een klant een medecontractant nodig?', all: [/financiële toetsing/i] },
+  { q: 'Wie pakt een wijziging van de kilometerbundel op?', all: [/klantenservice/i] },
+  { q: 'Hoe lang duurt de levering van een nieuwe auto?', all: [/4 tot 6 maanden|vier tot zes maanden/i] },
   // Werkverdeling
   { q: 'Een klant met een rijdende auto heeft een vraag over zijn lopende contract. Wie pakt dat op?', all: [/klantenservice/i], none: [/werkwijze/i] },
   { q: 'Wie doet de levering van de auto?', all: [/klantenservice/i] },

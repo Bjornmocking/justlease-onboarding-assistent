@@ -201,6 +201,27 @@ const QUESTIONS = [
     ],
     explanation: 'Je beslist nooit zelf over korting of tegemoetkoming. Dat beslist een senior. Zeg ook niets toe wat niet zwart op wit in de voorwaarden staat.',
   },
+  {
+    question: 'Vanaf welke leeftijd mag iemand bij Justlease privé leasen?',
+    options: ['Minimaal 18 jaar', 'Minimaal 21 jaar', 'Minimaal 23 jaar', 'Minimaal 25 jaar'],
+    explanation: 'De klant is minimaal 18 jaar oud, heeft een geldig rijbewijs en ID-bewijs en voldoet aan de minimale inkomenseis.',
+    source: 'justlease.nl/wanneer-auto-leasen',
+  },
+  {
+    question: 'Wanneer heeft een klant een medecontractant nodig?',
+    options: [
+      'Als de hoofdcontractant niet alleen door de financiële toetsing komt',
+      'Altijd, bij elk leasecontract',
+      'Alleen als de klant jonger is dan 25 jaar',
+      'Alleen bij een occasion',
+    ],
+    explanation: 'Een medecontractant is nodig als de hoofdcontractant niet alleen door de financiële toetsing komt. De medecontractant levert ook een salarisstrook, het bankafschrift met de woonlasten en een rijbewijs aan.',
+  },
+  {
+    question: 'Een klant wil zijn kilometerbundel wijzigen. Wie pakt dit op?',
+    options: ['Klantenservice', 'Sales', 'De financiële afdeling', 'Dit kan alleen bij het einde van het contract'],
+    explanation: 'Het wijzigen van de kilometerbundel valt onder klantenservice. De klant kan dit aanvragen via lps-info.arval.com/bundelwijziging.',
+  },
 ];
 
 const quizContainer = document.getElementById('quiz-container');
@@ -297,9 +318,10 @@ function renderQuiz() {
     const input = option && option.querySelector('input');
     if (input) input.dataset.wasChecked = input.checked ? 'true' : 'false';
   };
+  // Een klik op de tekst geeft de browser door als klik op het rondje; daar reageren we op.
   quizContainer.onclick = (event) => {
-    const input = event.target.closest('.quiz-option') && event.target.closest('.quiz-option').querySelector('input');
-    if (input && !input.disabled && input.dataset.wasChecked === 'true') {
+    const input = event.target;
+    if (input.matches && input.matches('.quiz-option input') && !input.disabled && input.dataset.wasChecked === 'true') {
       input.checked = false;
       input.dataset.wasChecked = 'false';
       updateProgress();
