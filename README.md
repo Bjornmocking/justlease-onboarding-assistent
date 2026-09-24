@@ -34,7 +34,7 @@ Vragen waarop de assistent het antwoord niet wist worden vastgelegd in Supabase 
 
 Instellen (door de eigenaar):
 1. Supabase-project aanmaken, kies een Europese regio. Voer [`supabase/schema.sql`](supabase/schema.sql) uit in de SQL Editor.
-2. In Vercel, Environment Variables: `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY` (geheim, alleen op de server) en `ADMIN_TOKEN` (eigen lange, willekeurige code).
+2. In Vercel, Environment Variables: `SUPABASE_URL`, `SUPABASE_SECRET_KEY` (de "secret key", geheim, alleen op de server) en `ADMIN_TOKEN` (eigen lange, willekeurige code).
 3. Opnieuw deployen.
 
 De opslag zit in `lib/log.js`, zodat hij later eenvoudig te vervangen is.
