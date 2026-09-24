@@ -3,17 +3,6 @@ const MAX_MISTAKES = 3;
 // Elke vraag: eerste optie in `options` is het juiste antwoord; de volgorde wordt bij het tonen gehusseld.
 const QUESTIONS = [
   {
-    question: 'Welk rijbewijs moet een klant aanleveren bij zijn aanvraag?',
-    options: [
-      'Een geldig Europees rijbewijs (voor- en achterkant)',
-      'Alleen de voorkant van een Nederlands rijbewijs',
-      'Een rijbewijs mag ook verlopen zijn',
-      'Een rijbewijs hoeft pas bij aflevering getoond te worden',
-    ],
-    explanation: 'Voor- en achterkant van een geldig Europees rijbewijs zijn altijd nodig. Bij aflevering moet het rijbewijs ook getoond worden.',
-    source: 'Kredietcheck: aan te leveren documenten',
-  },
-  {
     question: 'Hoe oud mag de loonstrook of het bankafschrift met salaris maximaal zijn?',
     options: ['Maximaal twee maanden', 'Maximaal zes maanden', 'Maximaal een jaar', 'De leeftijd maakt niet uit'],
     explanation: 'Loonstrook en bankafschrift met salarisbijschrijving mogen niet ouder zijn dan twee maanden.',
@@ -76,45 +65,6 @@ const QUESTIONS = [
     source: 'Aanvullende voorwaarden Justlease',
   },
   {
-    question: 'Waar moet een klant onderhoud en reparatie van de auto laten uitvoeren?',
-    options: [
-      'Bij een BOVAG-onderhoudsbedrijf',
-      'Bij elke garage naar keuze',
-      'Alleen bij een Justlease-vestiging',
-      'De klant doet het onderhoud zelf',
-    ],
-    explanation: 'De klant moet de auto tijdig aanbieden bij een BOVAG-onderhoudsbedrijf.',
-    source: 'Aanvullende voorwaarden Justlease',
-  },
-  {
-    question: 'Bij het inleveren zit er een klein deukje in de auto. Wanneer wordt dat gezien als acceptabele gebruikersschade?',
-    options: [
-      'Als het niet groter is dan een 2-euromunt, niet door de lak heen is en niet gevouwen is',
-      'Alleen als er helemaal geen deuk in zit',
-      'Als het kleiner is dan 10 centimeter, ook als de lak beschadigd is',
-      'Deukjes zijn altijd voor rekening van de klant',
-    ],
-    explanation: 'Kleine deukjes door deurinslag en parkeerbeschadiging zijn acceptabel als ze niet groter zijn dan een 2-euromunt, niet door de lak heen zijn, niet gevouwen zijn en er maximaal één per carrosseriedeel is.',
-    source: 'Innameprotocol',
-  },
-  {
-    question: 'Waar vindt een klant de groene kaart van de auto?',
-    options: ['In de MyLeez-app', 'Op de website justlease.nl', 'Bij de gemeente', 'Per post bij de verzekeraar'],
-    explanation: 'De groene kaart staat in de MyLeez-app.',
-    source: 'Aanvullende voorwaarden Justlease',
-  },
-  {
-    question: 'Op wie zijn naam staat het voertuig?',
-    options: ['Arval B.V.', 'De klant', 'De dealer', 'De verzekeraar Greenval'],
-    explanation: 'Het voertuig staat op naam van Arval B.V. Justlease is een handelsnaam van Arval B.V.',
-    source: 'Aanvullende voorwaarden Justlease',
-  },
-  {
-    question: 'Een klant vraagt wanneer en hoe zijn nieuwe auto wordt geleverd. Wie pakt dit op?',
-    options: ['Klantenservice', 'Sales', 'De financiële afdeling', 'De klant regelt dit zelf met de dealer'],
-    explanation: 'Alles tot en met het afronden van de aanvraag is sales. De levering van de auto hoort bij klantenservice.',
-  },
-  {
     question: 'Een klant met een rijdende auto heeft een vraag over zijn lopende contract. Wie pakt dit op?',
     options: ['Klantenservice', 'Sales', 'De financiële afdeling', 'Dit hangt af van de looptijd van het contract'],
     explanation: 'Alle vragen over een rijdend contract horen bij klantenservice. Gaat het om een verlenging of om twijfel over een nieuwe auto, doorrijden of inleveren, dan is het een salesgesprek.',
@@ -123,17 +73,6 @@ const QUESTIONS = [
     question: 'De auto van een klant rijdt al, maar hij wil zijn contract verlengen. Wie pakt dit op?',
     options: ['Sales', 'Klantenservice', 'De financiële afdeling', 'Niemand, verlengen kan alleen bij het einde van het contract'],
     explanation: 'Verlengingen vallen onder sales, ook als de auto al rijdt. Twijfelt de klant bij een aflopend contract over een nieuwe auto, doorrijden of inleveren, dan is dat ook een salesgesprek. Kiest hij voor inleveren, dan is het klantenservice.',
-  },
-  {
-    question: 'Een klant heeft in één kalenderjaar 3 of meer niet-verhaalbare schades gehad. Wat gebeurt er met zijn eigen bijdrage?',
-    options: [
-      'Die wordt hoger: 950 euro bij het Standaard Pakket, voor het resterende deel van de leaseperiode',
-      'Die blijft hetzelfde',
-      'De klant hoeft dan niets meer te betalen',
-      'Het contract wordt direct beëindigd',
-    ],
-    explanation: 'Bij 3 of meer niet-verhaalbare schades in één kalenderjaar geldt een hogere eigen bijdrage voor het resterende deel van de leaseperiode: 950 euro bij het Standaard Pakket, 650 bij Comfort en 350 bij Zorgeloos.',
-    source: 'Aanvullende voorwaarden Justlease',
   },
   {
     question: 'Vanaf wanneer is vervangend vervoer op kosten van Justlease bij het Comfort Pakket?',
@@ -202,12 +141,6 @@ const QUESTIONS = [
     explanation: 'Je beslist nooit zelf over korting of tegemoetkoming. Dat beslist een senior. Zeg ook niets toe wat niet zwart op wit in de voorwaarden staat.',
   },
   {
-    question: 'Vanaf welke leeftijd mag iemand bij Justlease privé leasen?',
-    options: ['Minimaal 18 jaar', 'Minimaal 21 jaar', 'Minimaal 23 jaar', 'Minimaal 25 jaar'],
-    explanation: 'De klant is minimaal 18 jaar oud, heeft een geldig rijbewijs en ID-bewijs en voldoet aan de minimale inkomenseis.',
-    source: 'justlease.nl/wanneer-auto-leasen',
-  },
-  {
     question: 'Wanneer heeft een klant een medecontractant nodig?',
     options: [
       'Als de hoofdcontractant niet alleen door de financiële toetsing komt',
@@ -221,6 +154,23 @@ const QUESTIONS = [
     question: 'Een klant wil zijn kilometerbundel wijzigen. Wie pakt dit op?',
     options: ['Klantenservice', 'Sales', 'De financiële afdeling', 'Dit kan alleen bij het einde van het contract'],
     explanation: 'Het wijzigen van de kilometerbundel valt onder klantenservice. De klant kan dit aanvragen via lps-info.arval.com/bundelwijziging.',
+  },
+  {
+    question: 'Kan een klant met een negatieve BKR-codering bij Justlease leasen?',
+    options: ['Nee, dat kan niet', 'Ja, als hij een hogere waarborgsom betaalt', 'Ja, met een medecontractant', 'Alleen bij een occasion'],
+    explanation: 'Met een negatieve BKR-codering kan een klant niet leasen, ook niet zakelijk. Justlease heeft een zorgplicht voor de financiële last die mensen kunnen dragen. Een leasecontract wordt altijd geregistreerd bij het BKR.',
+    source: 'justlease.nl/private-lease-bkr',
+  },
+  {
+    question: 'Wat betaalt een klant naast het maandelijkse leasebedrag zelf?',
+    options: [
+      'Brandstof of laadkosten, boetes en het eigen risico bij schade',
+      'De wegenbelasting en het onderhoud',
+      'De verzekering en de banden',
+      'De pechhulp en het vervangend vervoer',
+    ],
+    explanation: 'Wegenbelasting, onderhoud, banden, verzekering, pechhulp en vervangend vervoer zitten in het maandbedrag. Brandstof of laadkosten, verkeersboetes en het eigen risico bij schade betaalt de klant zelf.',
+    source: 'justlease.nl/kosten-private-lease',
   },
 ];
 

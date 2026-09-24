@@ -20,7 +20,8 @@ Justlease is het Private Lease label binnen Arval BNP Paribas Group. Justlease i
 - Ongeveer 2,5 miljoen websitebezoekers per jaar.
 - Ongeveer 120 collega's werken aan Private Lease bij Justlease.
 - Meer dan 45 jaar lease-ervaring.
-- Er zijn geen openbare cijfers over het aantal nieuwe leasecontracten per maand.
+- De aanbiedingenpagina noemt 31.000 mensen die de klant al voorgingen. De pagina Over Justlease noemt ongeveer 20.000 tevreden klanten op de weg. Er zijn geen openbare cijfers over het aantal nieuwe leasecontracten per maand.
+- De site noemt meer dan 40 tot meer dan 50 merken en meer dan 3.000 snel leverbare auto's.
 
 ## Wat Justlease klanten biedt
 - Auto en contract op maat: de klant kiest zelf welke opties hij wel of niet wil.

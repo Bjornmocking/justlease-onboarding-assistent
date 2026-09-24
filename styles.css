@@ -1077,3 +1077,12 @@ a {
     columns: 1;
   }
 }
+
+.numbered {
+  margin: 0 0 12px;
+  padding-left: 22px;
+}
+
+.numbered li {
+  padding: 3px 0;
+}

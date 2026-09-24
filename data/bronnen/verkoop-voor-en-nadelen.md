@@ -27,7 +27,7 @@ Alle kosten voor afschrijving, vervangend vervoer, verzekering, onderhoud, bande
 - Private lease is geen lening. Justlease blijft altijd eigenaar van de leaseauto.
 - Er is wel een BKR-registratie, ook bij Justlease.
 - De registratie blijft 5 jaar na het einde van het contract zichtbaar bij het BKR, met een einddatum erbij zodat duidelijk is dat er geen verplichtingen meer zijn.
-- Wat de site niet zegt: of iemand met een negatieve BKR-codering kan leasen. Dat staat niet in de bronnen. Beantwoord dat niet zelf, maar leg het voor aan de financiële afdeling of een senior.
+- Met een negatieve BKR-codering kan een klant bij Justlease niet leasen (zorgplicht). Een leasecontract wordt altijd geregistreerd bij het BKR, onder de code OA. Zie het onderwerp BKR.
 
 ## Vervangend vervoer
 Vervangend vervoer verschilt per servicepakket: Standaard na 48 uur, Comfort na 24 uur, Zorgeloos direct. Zie de samenvatting van de servicepakketten.

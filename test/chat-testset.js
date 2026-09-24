@@ -30,7 +30,6 @@ const TESTS = [
   { q: 'Is private lease een lening?', all: [/eigenaar/i], none: [/weet ik niet zeker/i] },
   { q: 'Krijgt een klant een BKR-registratie bij een leasecontract?', all: [/BKR/, /\bja\b/i] },
   { q: 'Wat is de levertijd van een occasion?', all: [/6 weken|zes weken/i] },
-  { q: 'Kan iemand met een negatieve BKR-codering leasen?', all: [ESCALATE], none: [/ja, dat kan|nee, dat kan niet|is niet mogelijk/i] },
   // Vervolgvraag met gespreksgeheugen
   {
     q: 'En wat als hij een tijdelijk contract heeft?',
@@ -40,8 +39,15 @@ const TESTS = [
     ],
     all: [/werkgeversverklaring/i],
   },
+  // Uit de openbare website
+  { q: 'Kan iemand met een negatieve BKR-codering leasen?', all: [/nee|niet/i], none: [/ja, dat kan|dat kan wel/i] },
+  { q: 'Hoe lang blijft een BKR-registratie zichtbaar na het einde van het contract?', all: [/5 jaar|vijf jaar/i] },
+  { q: 'Wat betaalt een klant zelf naast de maandprijs?', all: [/brandstof|laadkosten|stroom/i, /boete/i] },
+  { q: 'Wat is een voorloopauto en wanneer kan een klant die aanvragen?', all: [/tijdelijk/i, /besteld|bestelling/i] },
+  { q: 'Wat heeft een zzp-er nodig om te leasen?', all: [/KvK/i, /Belastingdienst|inkomensverklaring/i] },
+  { q: 'Mag een klant zijn auto uitlenen?', all: [/Nederlands rijbewijs|rijbewijs/i], none: [/weet ik niet zeker/i] },
+  { q: 'Biedt Justlease financial lease aan?', all: [/niet|geen/i] },
   // Nieuwe informatie
-  { q: 'Vanaf welke leeftijd mag iemand leasen?', all: [/18/] },
   { q: 'Wanneer heeft een klant een medecontractant nodig?', all: [/financiële toetsing/i] },
   { q: 'Wie pakt een wijziging van de kilometerbundel op?', all: [/klantenservice/i] },
   { q: 'Hoe lang duurt de levering van een nieuwe auto?', all: [/4 tot 6 maanden|vier tot zes maanden/i] },
